@@ -27,7 +27,7 @@ for state in states:
         data = data.replace('<!--DATA_JS-->', data_js)
         data = data.replace('<!--MAIN_JS-->', main_js)
 
-    with open(f'../html/{state}.html', 'w') as f:
+    with open(f'../docs/{state}.html', 'w') as f:
         f.write(data)
 
 def write_index():
