@@ -1,0 +1,189 @@
+<html>
+
+<body>
+
+<div style="display: flex">
+    <div>
+        <?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="166.09736920255517" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs />
+	<g id="counties"><path d="M 5.79799545408272,156.19912359164627 L 15.997764619380566,155.49283865943255 L 30.26440675898089,157.77461955453478 L 37.33654398551049,152.4706809827842 L 45.23638779160252,152.87303515391702 L 62.87278286864151,135.1239080152203 L 70.99003819414351,146.53497119483006 L 84.63249001394756,165.5935061422895 L 87.68133179612416,187.59371619821738 L 84.83860791294201,203.3424171446711 L 87.35629620430197,225.19180398023366 L 99.80955422886345,236.11376296213112 L 107.53128350723624,256.9403196791549 L 90.87848727712975,252.8580127406323 L 84.17181332600069,265.95808344893004 L 67.58617279577956,269.40182730241656 L 51.594850651831386,289.2090297552008 L 13.70526838585859,290.79461491953 L 8.387197536958274,200.49042717075054 L 6.640857518813982,170.64103092003273 L 5.79799545408272,156.19912359164627 z" id="c10001" />
+		<path d="M 13.70526838585859,290.79461491953 L 51.594850651831386,289.2090297552008 L 67.58617279577956,269.40182730241656 L 84.17181332600069,265.95808344893004 L 90.87848727712975,252.8580127406323 L 107.53128350723624,256.9403196791549 L 108.45703575729445,259.43416332949664 L 108.12279947139946,266.8813233132195 L 124.3836798364242,286.7109733537434 L 140.87988233474002,302.2493138053276 L 151.1911251956433,304.2910068667382 L 156.5575562687498,300.1806150384727 L 160.65102462123374,329.1835833597125 L 164.8602143883677,375.3365547106677 L 166.09736920255517,399.82713692799547 L 135.16480872233092,400.0 L 99.85486378082288,399.6482831314337 L 68.58769699052996,399.2869670140891 L 20.006152063999238,397.3446530256515 L 18.570424756021662,373.5350715766878 L 18.27072542972801,368.3405691700782 L 17.032563065898852,346.8498021506204 L 17.03169904700065,346.83528944085066 L 13.70526838585859,290.79461491953 z" id="c10005" />
+		<path d="M 3.2960681289579754,33.586886929914506 L 7.910125493214534,23.29001213089036 L 15.988807633714469,13.42274700989784 L 28.065102135609227,5.072686935948033 L 43.302339869103534,1.313056552871792 L 48.611485418777484,0.0 L 68.4336012876235,2.9045552715544023 L 83.13193531329998,10.769734720326978 L 73.26197782860899,21.173448190258565 L 69.20382764404685,35.81188243548804 L 62.04994886612499,44.13479297137133 L 56.37883545012431,55.33942073096369 L 50.95645113636524,60.346213351633864 L 54.39263160446319,70.09595245138304 L 61.350837066584646,75.29214488380569 L 58.00285070232864,87.60058435775568 L 57.89765745188537,98.31088453995186 L 43.37858224485226,103.74260439002717 L 48.10179544767953,115.36223648878762 L 59.290960075683785,130.08348579433073 L 62.87278286864151,135.1239080152203 L 45.23638779160252,152.87303515391702 L 37.33654398551049,152.4706809827842 L 30.26440675898089,157.77461955453478 L 15.997764619380566,155.49283865943255 L 5.79799545408272,156.19912359164627 L 4.443044435417245,132.93432494657145 L 4.441066335818395,132.8903410918965 L 0.0,33.573773694856484 L 3.2960681289579754,33.586886929914506 z" id="c10003" />
+	</g>
+</svg>
+        <div id="group-pops"></div>
+        <div id ="score-box"></div>
+        <div id ="best-score-box" style="font-style: italic"></div>
+    </div>
+    <div id='hover-text' style="width: 200px"></div>
+    <ul id="sorted-list"> </ul>
+</div>
+
+<hr>
+
+<footer id="footer">
+    <a href="?k=2">k = 2</a>
+    <a href="?k=3">k = 3</a>
+    <a href="?k=4">k = 4</a>
+    <br>
+</footer>
+
+</body>
+
+<script> const STATE = "de"; </script>
+<script>const COUNTY_DATA = {'c10001': {'name': 'Kent', 'pop': 181851, 'adj': ['c10003', 'c10005', 'c24011', 'c24029', 'c24035', 'c34009', 'c34011', 'c34033']}, 'c10003': {'name': 'New Castle', 'pop': 570719, 'adj': ['c10001', 'c24015', 'c24029', 'c34015', 'c34033', 'c42029', 'c42045']}, 'c10005': {'name': 'Sussex', 'pop': 237378, 'adj': ['c10001', 'c24011', 'c24019', 'c24045', 'c24047', 'c34009']}}; const ALL_STATES=['ak', 'al', 'ar', 'az', 'ca', 'co', 'ct', 'de', 'fl', 'ga', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo', 'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'];</script>
+<script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
+const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
+
+const FMT = {
+    human: (v) => new Intl.NumberFormat('en', { notation: 'compact' }).format(v),
+    long: (v) => new Intl.NumberFormat('fr-FR').format(v),
+}
+
+
+function isValid() {
+    const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
+
+    return group_ixs.every(isGroupConnected);
+}
+
+function isGroupConnected(grp) {
+    const seen = {};
+    function dfs(u) {
+        seen[u] = true;
+        const adj = COUNTY_DATA[u].adj.filter(v => GROUPS[v] === grp && !seen[v] && COUNTY_DATA[v]);
+        adj.forEach(dfs);
+    }
+    const inGroup = Object.keys(GROUPS).filter(k => GROUPS[k] === grp);
+    if (inGroup.length === 0) { return false; }
+    dfs(inGroup[0]);
+
+    return inGroup.sort().join(';') === Object.keys(seen).sort().join(';')
+}
+
+
+const makeToggle = (cid) => () => {
+    toggleGroup(cid);
+    updateDisplay([cid]);
+}
+
+function toggleGroup(cid) {
+    const old_grp = GROUPS[cid];
+    const new_grp = (old_grp+1) % N_GROUPS;
+    GROUPS[cid] = new_grp;
+}
+
+const onMouseOver = function() {
+    const el = document.getElementById('hover-text');
+    const {name, pop} = COUNTY_DATA[this.id];
+
+    el.textContent = `${name}\n${FMT.long(pop)}`;
+}
+
+function updateDisplay(cids) {
+    cids.forEach(cid => {
+        const grp = GROUPS[cid];
+        const color = COLORS[grp]
+
+        document.getElementById('list-'+cid).style.color = color;
+        document.getElementById(cid).style.fill = color;
+    });
+
+    const rslt = sumGroups();
+    Object.entries(rslt).forEach(([group, pop]) => {
+        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+    });
+
+    const lsKey = `${STATE}-${N_GROUPS}`;
+    const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
+    let bestScore = localStorage.getItem(lsKey) || '';
+    const valid = isValid();
+    document.getElementById('score-box').textContent = score + "\t" + valid;
+    if (valid && Number(bestScore || TOTAL) > score) {
+        bestScore = score;
+        localStorage.setItem(lsKey, score);
+        localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
+    }
+
+    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+}
+
+function sumGroups() {
+    const rslt = Object.fromEntries(Array(N_GROUPS).fill(0).map((v, ix) => [ix, 0]));
+    Object.entries(GROUPS).forEach(([id, group]) => {
+        const pop = COUNTY_DATA[id].pop;
+        rslt[group] += pop;
+    });
+
+    return rslt;
+}
+
+function friendlyGroups() {
+    const rslt = Object.fromEntries(Array(N_GROUPS).fill(0).map((v, ix) => [ix, []]));
+    Object.entries(GROUPS).forEach(([id, grp]) => {
+        rslt[grp].push(COUNTY_DATA[id].name);
+    });
+    return rslt;
+}
+
+function setup() {
+    const footer = document.getElementById('footer')
+    ALL_STATES.forEach((st, ix) => {
+        const a = document.createElement("a");
+        a.href = `${st}.html`;
+        a.style='margin: 5px;';
+        a.innerText = st;
+        footer.appendChild(a);
+        if (ix == 24) { footer.appendChild(document.createElement('br'))}
+    });
+
+    const county_els = Array.from(document.getElementsByTagName('path'));
+    const county_ids = county_els.map(e => e.id);
+
+    // map handlers
+    county_els.forEach(path_el => {
+        path_el.onmouseover = onMouseOver.bind(path_el);
+        path_el.onclick = makeToggle(path_el.id);
+    });
+
+    // sorted list
+    const sorted_counties = county_ids.map(cid => ({...COUNTY_DATA[cid], id: cid}));
+
+    sorted_counties.sort((a,b) => b.pop - a.pop);
+    //sorted_counties.sort((a,b) => b.name > a.name ? -1 : 1);
+
+    const list_el = document.getElementById('sorted-list');
+    sorted_counties.forEach(({id, name, pop}) => {
+        const li = document.createElement("li");
+        li.id = 'list-'+id;
+        li.onclick = makeToggle(id);
+        li.appendChild(document.createTextNode(name + ": " + FMT.long(pop)));
+        list_el.appendChild(li) 
+
+        li.onmouseover = () => {
+            document.getElementById(id).style.stroke= 'red';
+        }
+        li.onmouseleave = () => {
+            document.getElementById(id).style.stroke= null;
+        }
+    });
+
+    const groups_el = document.getElementById('group-pops');
+    for (let ix = 0; ix < N_GROUPS; ++ix) {
+        const el = document.createElement("p");
+        el.id = 'pop-'+ix;
+        el.style.color = COLORS[ix];
+        groups_el.appendChild(el);
+    }
+
+    const total_pop = sorted_counties.reduce((acc, r) => acc + r.pop, 0);
+    const groups = Object.fromEntries(county_ids.map(id => [id, 0]));
+
+    return [groups, total_pop];
+};
+
+const [GROUPS, TOTAL] = setup();
+updateDisplay(Object.keys(GROUPS));</script>
+
+</html>
