@@ -1,0 +1,34 @@
+<html>
+
+<body>
+
+<div style="display: flex">
+    <div>
+        {% include svgs/{{page.state}}.svg %}
+        <div id="group-pops"></div>
+        <div id ="score-box"></div>
+        <div id ="best-score-box" style="font-style: italic"></div>
+    </div>
+    <div id='hover-text' style="width: 200px"></div>
+    <ul id="sorted-list"> </ul>
+</div>
+
+<hr>
+
+<footer id="footer">
+    <a href="?k=2">k = 2</a>
+    <a href="?k=3">k = 3</a>
+    <a href="?k=4">k = 4</a>
+    <br>
+    {% for st in site.data.states %}
+        <a href="{{st.state}}.html">{{st.state}}</a>
+    {% endfor %}
+</footer>
+
+</body>
+
+<script> const STATE = '{{page.state}}'</script>
+<script>const COUNTY_DATA={{site.data.adj[page.state] | jsonify }}; </script>
+<script>{% include main.js %} </script>
+
+</html>

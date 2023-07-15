@@ -1,0 +1,55 @@
+---
+---
+
+<html>
+
+<head>
+    <style>
+        .opt {
+            background-color: peachpuff;
+        }
+
+        .mine {
+            background-color: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <th>states</th>
+            <th>counties</th>
+            <th>k = 2</th>
+            <th>k = 4</th>
+        </thead>
+        <tbody>
+            {% for row in site.data.states %}
+            <tr id={{row.state}}>
+                <td><a href="states/{{row.state}}.html">{{row.state}}</a></td>
+                <td>{{site.data.adj[row.state] | size}}</td>
+                <td class="{% if row.opt2 %}opt {%endif%}">{{row.score2}}</td>
+                <td class="{% if row.opt4 %}opt {%endif%}">{{row.score4}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+<script>
+    const tds = Array.from(document.getElementsByTagName('tr'));
+    tds.forEach(td => {
+        if (!td.id) { return; }
+
+        [[2, 2], [3, 4]].forEach(([child_ix, group_size]) => {
+
+            const table = Number(td.children[child_ix].innerText);
+            const mine = localStorage.getItem(`${td.id}-${group_size}`);
+            if (mine && Number(mine) < table) {
+                td.children[child_ix].innerText = mine;
+                td.children[child_ix].classList.add('mine');
+            }
+        });
+    });
+</script>
+
+</html>
