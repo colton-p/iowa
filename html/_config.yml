@@ -1,5 +1,5 @@
-include: ['svgs']
 page_gen:
   - data: 'states'
     template: 'state'
     name: state
+destination: ../docs
