@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="208.4906423081755" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 148.50058744866956,309.84627998040867 L 157.01794127873114,299.048926650315 L 156.4771551150025,270.8726558819872 L 170.39787761359813,272.1778715632575 L 171.97984873802682,279.3571509375736 L 178.6527960402,270.51831961559094 L 179.70046392347268,275.1724604660798 L 179.07372130846647,280.65240401513125 L 178.28624679106503,287.5274032345818 L 176.56821656045153,295.689775078368 L 183.38999138037403,303.50449362058447 L 189.21738728138462,311.8229912071669 L 195.96058169366714,319.86564510334233 L 194.7115396259984,325.62498811008123 L 194.70893563107575,325.6369870200452 L 194.4165280442821,333.3961916718841 L 195.3855234772313,334.2839541372774 L 189.1728636439182,340.9067021290217 L 166.9853491131248,340.87466968899093 L 172.11243369533966,332.2347050596529 L 160.68493836940414,322.792541710167 L 160.04615583361252,322.2561647321639 L 147.23996329056075,311.349011177726 L 148.50058744866956,309.84627998040867 z" id="c33017" />
@@ -19,124 +23,135 @@
 		<path d="M 124.54918777864894,364.2118828760307 L 132.87115514450215,361.69705739492053 L 131.12840859216598,352.1750486185897 L 129.92375934432937,347.31332810291957 L 135.1555967775123,337.9475038692552 L 139.4307263108301,328.679648397646 L 143.5326886775229,320.04688433803955 L 145.6080868991634,315.08097603965217 L 147.23996329056075,311.349011177726 L 160.04615583361252,322.2561647321639 L 160.68493836940414,322.792541710167 L 172.11243369533966,332.2347050596529 L 166.9853491131248,340.87466968899093 L 189.1728636439182,340.9067021290217 L 195.3855234772313,334.2839541372774 L 202.5477938449341,340.8375733368979 L 208.4906423081755,343.86203170053597 L 205.0134769936581,351.20155579683285 L 201.72847584169992,356.8863477141982 L 198.04874173063692,364.7519682170449 L 196.6622148105471,370.2348842239969 L 196.02737201476836,372.7429944087229 L 190.68079800883186,373.1068827268146 L 183.21559172264355,370.97841317831416 L 179.2116687617335,373.4036790432903 L 171.9289358432429,374.9788492578043 L 169.98549343113336,379.2887402830701 L 168.26588315552814,383.098559094629 L 162.37239544397883,382.278398921614 L 158.6082818630392,381.75258573503265 L 154.52268014468459,385.57782089353725 L 155.05493365121248,393.7131258960685 L 147.87263915317877,393.91024973677787 L 134.42906672094418,386.56647928188096 L 134.81226673764542,384.4017622891171 L 127.30820427908914,380.45984993245753 L 125.56279387869309,370.416704329505 L 124.54918777864894,364.2118828760307 z" id="c33015" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'nh'</script>
-<script>const COUNTY_DATA={"c33001":{"name":"Belknap","pop":63705,"adj":["c33003","c33009","c33013","c33017"]},"c33003":{"name":"Carroll","pop":50107,"adj":["c23017","c23031","c33001","c33007","c33009","c33017"]},"c33005":{"name":"Cheshire","pop":76458,"adj":["c25011","c25027","c33011","c33019","c50025"]},"c33007":{"name":"Coos","pop":31268,"adj":["c23017","c33003","c33009","c50009"]},"c33009":{"name":"Grafton","pop":91118,"adj":["c33001","c33003","c33007","c33013","c33019","c50005","c50009","c50017","c50027"]},"c33011":{"name":"Hillsborough","pop":422937,"adj":["c25009","c25017","c25027","c33005","c33013","c33015","c33019"]},"c33013":{"name":"Merrimack","pop":153808,"adj":["c33001","c33009","c33011","c33015","c33017","c33019"]},"c33015":{"name":"Rockingham","pop":314176,"adj":["c23031","c25009","c33011","c33013","c33017"]},"c33017":{"name":"Strafford","pop":130889,"adj":["c23031","c33001","c33003","c33013","c33015"]},"c33019":{"name":"Sullivan","pop":43063,"adj":["c33005","c33009","c33011","c33013","c50025","c50027"]}}; </script>
+<script>const COUNTY_DATA = {"c33001":{"name":"Belknap","pop":63705,"adj":["c33003","c33009","c33013","c33017"]},"c33003":{"name":"Carroll","pop":50107,"adj":["c23017","c23031","c33001","c33007","c33009","c33017"]},"c33005":{"name":"Cheshire","pop":76458,"adj":["c25011","c25027","c33011","c33019","c50025"]},"c33007":{"name":"Coos","pop":31268,"adj":["c23017","c33003","c33009","c50009"]},"c33009":{"name":"Grafton","pop":91118,"adj":["c33001","c33003","c33007","c33013","c33019","c50005","c50009","c50017","c50027"]},"c33011":{"name":"Hillsborough","pop":422937,"adj":["c25009","c25017","c25027","c33005","c33013","c33015","c33019"]},"c33013":{"name":"Merrimack","pop":153808,"adj":["c33001","c33009","c33011","c33015","c33017","c33019"]},"c33015":{"name":"Rockingham","pop":314176,"adj":["c23031","c25009","c33011","c33013","c33017"]},"c33017":{"name":"Strafford","pop":130889,"adj":["c23031","c33001","c33003","c33013","c33015"]},"c33019":{"name":"Sullivan","pop":43063,"adj":["c33005","c33009","c33011","c33013","c50025","c50027"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -149,7 +164,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -196,21 +213,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -265,7 +289,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="256.17853297002176" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 25.898524435898015,134.4718325012065 L 140.36784292978464,131.33868700176743 L 159.8672309507095,114.84841377615362 L 167.1879491746921,120.8101695612704 L 171.6876694473298,129.81160457078175 L 183.48876990478811,152.11250929122608 L 166.47574550666138,168.9375069005216 L 130.75751803041217,190.850336944719 L 25.816651373089147,193.31492913583725 L 25.817660097829933,193.2884148231531 L 25.846603669866514,173.52512311363094 L 25.903795390087176,134.684696896759 L 25.898524435898015,134.4718325012065 z" id="c44003" />
@@ -14,124 +18,135 @@
 		<path d="M 79.85375441636684,390.6591056740949 L 93.09764640872694,358.2421182089823 L 109.68575871869541,355.824736337155 L 113.5938612893846,383.7303974257366 L 118.74209548886205,398.51080147774303 L 92.92878606717052,400.0 L 79.85375441636684,390.6591056740949 z M 0.800779401388831,320.0328216879348 L 9.34953739967378,304.6233027630651 L 8.176654839239198,277.9440375509282 L 22.667491809154008,275.8930397058911 L 22.67102120397571,275.8007105148512 L 25.816651373089147,193.31492913583725 L 130.75751803041217,190.850336944719 L 166.47574550666138,168.9375069005216 L 157.20490682743224,247.8560380107254 L 153.951401282936,258.02859810011057 L 150.00679370521172,258.89093563518435 L 140.80222318337115,280.075665490424 L 131.16750059024506,296.6931847562076 L 106.27377585204249,295.9568696467183 L 82.39486679588461,301.63790815951575 L 55.730245655926716,312.5455310081688 L 45.94086517721838,314.2499640936784 L 26.57659529495143,317.61149895493696 L 0.0,324.8234946872455 L 0.800779401388831,320.0328216879348 z" id="c44009" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'ri'</script>
-<script>const COUNTY_DATA={"c44001":{"name":"Bristol","pop":50793,"adj":["c25005","c44003","c44005","c44007"]},"c44003":{"name":"Kent","pop":170363,"adj":["c09011","c09015","c44001","c44005","c44007","c44009"]},"c44005":{"name":"Newport","pop":85643,"adj":["c25005","c44001","c44003","c44009"]},"c44007":{"name":"Providence","pop":660741,"adj":["c09015","c25005","c25021","c25027","c44001","c44003"]},"c44009":{"name":"Washington","pop":129839,"adj":["c09011","c36103","c44003","c44005"]}}; </script>
+<script>const COUNTY_DATA = {"c44001":{"name":"Bristol","pop":50793,"adj":["c25005","c44003","c44005","c44007"]},"c44003":{"name":"Kent","pop":170363,"adj":["c09011","c09015","c44001","c44005","c44007","c44009"]},"c44005":{"name":"Newport","pop":85643,"adj":["c25005","c44001","c44003","c44009"]},"c44007":{"name":"Providence","pop":660741,"adj":["c09015","c25005","c25021","c25027","c44001","c44003"]},"c44009":{"name":"Washington","pop":129839,"adj":["c09011","c36103","c44003","c44005"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -144,7 +159,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -191,21 +208,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -260,7 +284,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

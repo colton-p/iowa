@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="337.6294418352947" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 49.691016016973784,111.67498493670183 L 51.17969461002426,111.73341461507125 L 68.86143336539061,112.43636268603562 L 70.72813276989842,111.29303694508923 L 74.84195785630762,111.49870838640294 L 78.63614608698495,112.88770289536437 L 78.29897388708204,113.9839562846935 L 77.91603877165223,116.19810692871519 L 76.50727280366469,121.31906903892116 L 78.163230770059,125.86757421560911 L 81.08630902157508,129.1784085030456 L 79.66896425242771,132.094584851652 L 63.25116912958913,131.43633810947168 L 61.07906697418218,129.7336023983649 L 61.044403463147624,127.3361564455219 L 58.57605009428093,125.85925635234355 L 59.254804868716406,120.8417300486912 L 52.778661776159275,117.8427844505166 L 49.874833686734675,114.65640277480352 L 51.007013276322006,112.35725015965765 L 49.691016016973784,111.67498493670183 z" id="c06011" />
@@ -67,124 +71,135 @@
 		<path d="M 178.80945755116355,195.22895438903134 L 210.03174512358098,195.2449683489896 L 215.1166788325383,199.87281965561104 L 229.6857990820782,213.23580042896936 L 232.33727377987557,215.6699457114305 L 237.89698225638833,220.75536787270988 L 255.27019758491792,236.69486463674627 L 259.10057524357444,240.23248147035127 L 268.7581681600461,249.07312191216067 L 275.6542801281827,255.41294863963844 L 277.2687297168074,256.892270348896 L 284.10840927867423,263.13655054890677 L 281.15048242726306,263.8698614290057 L 262.82729878813075,264.2426820150959 L 229.86507553283042,264.5810734780462 L 216.9340249535857,264.55949085700325 L 207.0676163534666,264.543897192677 L 204.23818882439767,264.91830933616416 L 204.32482050393355,261.8626746927281 L 205.16118867417302,261.662499831658 L 204.38967145838996,256.83386335465286 L 203.3756465556452,255.78539557607297 L 200.23174725480163,244.53233378583496 L 201.13738434111292,241.77018037410218 L 197.29519259823826,238.06901971196834 L 196.49109803015295,234.38430739460523 L 194.76735409887112,232.92897366143004 L 195.30495638729482,231.3175665279415 L 192.2452946917564,227.38741462996236 L 192.4454694633176,225.178893143007 L 191.48385502816114,221.4460513403658 L 192.45860981366008,219.23478810096583 L 189.94109973333343,212.06879865163157 L 184.7768842646569,208.78471510491795 L 182.71578329550434,208.61891469102378 L 180.72595728319968,200.85284929045108 L 178.38177517585976,200.20418833813588 L 178.80945755116355,195.22895438903134 z" id="c06027" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'ca'</script>
-<script>const COUNTY_DATA={"c06001":{"name":"Alameda","pop":1682353,"adj":["c06013","c06075","c06077","c06081","c06085","c06099"]},"c06003":{"name":"Alpine","pop":1204,"adj":["c06005","c06009","c06017","c06051","c06109","c32005"]},"c06005":{"name":"Amador","pop":40474,"adj":["c06003","c06009","c06017","c06067","c06077"]},"c06007":{"name":"Butte","pop":211632,"adj":["c06011","c06021","c06063","c06101","c06103","c06115"]},"c06009":{"name":"Calaveras","pop":45292,"adj":["c06003","c06005","c06077","c06099","c06109"]},"c06011":{"name":"Colusa","pop":21839,"adj":["c06007","c06021","c06033","c06101","c06113"]},"c06013":{"name":"Contra Costa","pop":1165927,"adj":["c06001","c06041","c06067","c06075","c06077","c06095","c06097"]},"c06015":{"name":"Del Norte","pop":27743,"adj":["c06023","c06093","c41015","c41033"]},"c06017":{"name":"El Dorado","pop":191185,"adj":["c06003","c06005","c06061","c06067","c32005"]},"c06019":{"name":"Fresno","pop":1008654,"adj":["c06027","c06031","c06039","c06047","c06051","c06053","c06069","c06107"]},"c06021":{"name":"Glenn","pop":28917,"adj":["c06007","c06011","c06033","c06045","c06103"]},"c06023":{"name":"Humboldt","pop":136463,"adj":["c06015","c06045","c06093","c06105"]},"c06025":{"name":"Imperial","pop":179702,"adj":["c04012","c04027","c06065","c06073"]},"c06027":{"name":"Inyo","pop":19016,"adj":["c06019","c06029","c06051","c06071","c06107","c32003","c32009","c32023"]},"c06029":{"name":"Kern","pop":909235,"adj":["c06027","c06031","c06037","c06071","c06079","c06083","c06107","c06111"]},"c06031":{"name":"Kings","pop":152486,"adj":["c06019","c06029","c06053","c06079","c06107"]},"c06033":{"name":"Lake","pop":68163,"adj":["c06011","c06021","c06045","c06055","c06097","c06113"]},"c06035":{"name":"Lassen","pop":32730,"adj":["c06049","c06063","c06089","c06091","c32031"]},"c06037":{"name":"Los Angeles","pop":10014009,"adj":["c06029","c06059","c06071","c06111"]},"c06039":{"name":"Madera","pop":156255,"adj":["c06019","c06043","c06047","c06051","c06109"]},"c06041":{"name":"Marin","pop":262321,"adj":["c06013","c06075","c06095","c06097"]},"c06043":{"name":"Mariposa","pop":17131,"adj":["c06039","c06047","c06099","c06109"]},"c06045":{"name":"Mendocino","pop":91601,"adj":["c06021","c06023","c06033","c06097","c06103","c06105"]},"c06047":{"name":"Merced","pop":281202,"adj":["c06019","c06039","c06043","c06069","c06085","c06099"]},"c06049":{"name":"Modoc","pop":8700,"adj":["c06035","c06089","c06093","c32031","c41035","c41037"]},"c06051":{"name":"Mono","pop":13195,"adj":["c06003","c06019","c06027","c06039","c06109","c32005","c32009","c32019","c32021"]},"c06053":{"name":"Monterey","pop":439035,"adj":["c06019","c06031","c06069","c06079","c06087"]},"c06055":{"name":"Napa","pop":138019,"adj":["c06033","c06095","c06097","c06113"]},"c06057":{"name":"Nevada","pop":102241,"adj":["c06061","c06091","c06115","c32031"]},"c06059":{"name":"Orange","pop":3186989,"adj":["c06037","c06065","c06071","c06073"]},"c06061":{"name":"Placer","pop":404739,"adj":["c06017","c06057","c06067","c06101","c06115","c32005","c32031","c32510"]},"c06063":{"name":"Plumas","pop":19790,"adj":["c06007","c06035","c06089","c06091","c06103","c06115"]},"c06065":{"name":"Riverside","pop":2418185,"adj":["c04012","c06025","c06059","c06071","c06073"]},"c06067":{"name":"Sacramento","pop":1585055,"adj":["c06005","c06013","c06017","c06061","c06077","c06095","c06101","c06113"]},"c06069":{"name":"San Benito","pop":64209,"adj":["c06019","c06047","c06053","c06085","c06087"]},"c06071":{"name":"San Bernardino","pop":2181654,"adj":["c04012","c04015","c06027","c06029","c06037","c06059","c06065","c32003"]},"c06073":{"name":"San Diego","pop":3298634,"adj":["c06025","c06059","c06065"]},"c06075":{"name":"San Francisco","pop":873965,"adj":["c06001","c06013","c06041","c06081"]},"c06077":{"name":"San Joaquin","pop":779233,"adj":["c06001","c06005","c06009","c06013","c06067","c06099"]},"c06079":{"name":"San Luis Obispo","pop":282424,"adj":["c06029","c06031","c06053","c06083"]},"c06081":{"name":"San Mateo","pop":764442,"adj":["c06001","c06075","c06085","c06087"]},"c06083":{"name":"Santa Barbara","pop":448229,"adj":["c06029","c06079","c06111"]},"c06085":{"name":"Santa Clara","pop":1936259,"adj":["c06001","c06047","c06069","c06081","c06087","c06099"]},"c06087":{"name":"Santa Cruz","pop":270861,"adj":["c06053","c06069","c06081","c06085"]},"c06089":{"name":"Shasta","pop":182155,"adj":["c06035","c06049","c06063","c06093","c06103","c06105"]},"c06091":{"name":"Sierra","pop":3236,"adj":["c06035","c06057","c06063","c06115","c32031"]},"c06093":{"name":"Siskiyou","pop":44076,"adj":["c06015","c06023","c06049","c06089","c06105","c41029","c41033","c41035"]},"c06095":{"name":"Solano","pop":453491,"adj":["c06013","c06041","c06055","c06067","c06097","c06113"]},"c06097":{"name":"Sonoma","pop":488863,"adj":["c06013","c06033","c06041","c06045","c06055","c06095"]},"c06099":{"name":"Stanislaus","pop":552878,"adj":["c06001","c06009","c06043","c06047","c06077","c06085","c06109"]},"c06101":{"name":"Sutter","pop":99633,"adj":["c06007","c06011","c06061","c06067","c06113","c06115"]},"c06103":{"name":"Tehama","pop":65829,"adj":["c06007","c06021","c06045","c06063","c06089","c06105"]},"c06105":{"name":"Trinity","pop":16112,"adj":["c06023","c06045","c06089","c06093","c06103"]},"c06107":{"name":"Tulare","pop":473117,"adj":["c06019","c06027","c06029","c06031"]},"c06109":{"name":"Tuolumne","pop":55620,"adj":["c06003","c06009","c06039","c06043","c06051","c06099"]},"c06111":{"name":"Ventura","pop":843843,"adj":["c06029","c06037","c06083"]},"c06113":{"name":"Yolo","pop":216403,"adj":["c06011","c06033","c06055","c06067","c06095","c06101"]},"c06115":{"name":"Yuba","pop":81575,"adj":["c06007","c06057","c06061","c06063","c06091","c06101"]}}; </script>
+<script>const COUNTY_DATA = {"c06001":{"name":"Alameda","pop":1682353,"adj":["c06013","c06075","c06077","c06081","c06085","c06099"]},"c06003":{"name":"Alpine","pop":1204,"adj":["c06005","c06009","c06017","c06051","c06109","c32005"]},"c06005":{"name":"Amador","pop":40474,"adj":["c06003","c06009","c06017","c06067","c06077"]},"c06007":{"name":"Butte","pop":211632,"adj":["c06011","c06021","c06063","c06101","c06103","c06115"]},"c06009":{"name":"Calaveras","pop":45292,"adj":["c06003","c06005","c06077","c06099","c06109"]},"c06011":{"name":"Colusa","pop":21839,"adj":["c06007","c06021","c06033","c06101","c06113"]},"c06013":{"name":"Contra Costa","pop":1165927,"adj":["c06001","c06041","c06067","c06075","c06077","c06095","c06097"]},"c06015":{"name":"Del Norte","pop":27743,"adj":["c06023","c06093","c41015","c41033"]},"c06017":{"name":"El Dorado","pop":191185,"adj":["c06003","c06005","c06061","c06067","c32005"]},"c06019":{"name":"Fresno","pop":1008654,"adj":["c06027","c06031","c06039","c06047","c06051","c06053","c06069","c06107"]},"c06021":{"name":"Glenn","pop":28917,"adj":["c06007","c06011","c06033","c06045","c06103"]},"c06023":{"name":"Humboldt","pop":136463,"adj":["c06015","c06045","c06093","c06105"]},"c06025":{"name":"Imperial","pop":179702,"adj":["c04012","c04027","c06065","c06073"]},"c06027":{"name":"Inyo","pop":19016,"adj":["c06019","c06029","c06051","c06071","c06107","c32003","c32009","c32023"]},"c06029":{"name":"Kern","pop":909235,"adj":["c06027","c06031","c06037","c06071","c06079","c06083","c06107","c06111"]},"c06031":{"name":"Kings","pop":152486,"adj":["c06019","c06029","c06053","c06079","c06107"]},"c06033":{"name":"Lake","pop":68163,"adj":["c06011","c06021","c06045","c06055","c06097","c06113"]},"c06035":{"name":"Lassen","pop":32730,"adj":["c06049","c06063","c06089","c06091","c32031"]},"c06037":{"name":"Los Angeles","pop":10014009,"adj":["c06029","c06059","c06071","c06111"]},"c06039":{"name":"Madera","pop":156255,"adj":["c06019","c06043","c06047","c06051","c06109"]},"c06041":{"name":"Marin","pop":262321,"adj":["c06013","c06075","c06095","c06097"]},"c06043":{"name":"Mariposa","pop":17131,"adj":["c06039","c06047","c06099","c06109"]},"c06045":{"name":"Mendocino","pop":91601,"adj":["c06021","c06023","c06033","c06097","c06103","c06105"]},"c06047":{"name":"Merced","pop":281202,"adj":["c06019","c06039","c06043","c06069","c06085","c06099"]},"c06049":{"name":"Modoc","pop":8700,"adj":["c06035","c06089","c06093","c32031","c41035","c41037"]},"c06051":{"name":"Mono","pop":13195,"adj":["c06003","c06019","c06027","c06039","c06109","c32005","c32009","c32019","c32021"]},"c06053":{"name":"Monterey","pop":439035,"adj":["c06019","c06031","c06069","c06079","c06087"]},"c06055":{"name":"Napa","pop":138019,"adj":["c06033","c06095","c06097","c06113"]},"c06057":{"name":"Nevada","pop":102241,"adj":["c06061","c06091","c06115","c32031"]},"c06059":{"name":"Orange","pop":3186989,"adj":["c06037","c06065","c06071","c06073"]},"c06061":{"name":"Placer","pop":404739,"adj":["c06017","c06057","c06067","c06101","c06115","c32005","c32031","c32510"]},"c06063":{"name":"Plumas","pop":19790,"adj":["c06007","c06035","c06089","c06091","c06103","c06115"]},"c06065":{"name":"Riverside","pop":2418185,"adj":["c04012","c06025","c06059","c06071","c06073"]},"c06067":{"name":"Sacramento","pop":1585055,"adj":["c06005","c06013","c06017","c06061","c06077","c06095","c06101","c06113"]},"c06069":{"name":"San Benito","pop":64209,"adj":["c06019","c06047","c06053","c06085","c06087"]},"c06071":{"name":"San Bernardino","pop":2181654,"adj":["c04012","c04015","c06027","c06029","c06037","c06059","c06065","c32003"]},"c06073":{"name":"San Diego","pop":3298634,"adj":["c06025","c06059","c06065"]},"c06075":{"name":"San Francisco","pop":873965,"adj":["c06001","c06013","c06041","c06081"]},"c06077":{"name":"San Joaquin","pop":779233,"adj":["c06001","c06005","c06009","c06013","c06067","c06099"]},"c06079":{"name":"San Luis Obispo","pop":282424,"adj":["c06029","c06031","c06053","c06083"]},"c06081":{"name":"San Mateo","pop":764442,"adj":["c06001","c06075","c06085","c06087"]},"c06083":{"name":"Santa Barbara","pop":448229,"adj":["c06029","c06079","c06111"]},"c06085":{"name":"Santa Clara","pop":1936259,"adj":["c06001","c06047","c06069","c06081","c06087","c06099"]},"c06087":{"name":"Santa Cruz","pop":270861,"adj":["c06053","c06069","c06081","c06085"]},"c06089":{"name":"Shasta","pop":182155,"adj":["c06035","c06049","c06063","c06093","c06103","c06105"]},"c06091":{"name":"Sierra","pop":3236,"adj":["c06035","c06057","c06063","c06115","c32031"]},"c06093":{"name":"Siskiyou","pop":44076,"adj":["c06015","c06023","c06049","c06089","c06105","c41029","c41033","c41035"]},"c06095":{"name":"Solano","pop":453491,"adj":["c06013","c06041","c06055","c06067","c06097","c06113"]},"c06097":{"name":"Sonoma","pop":488863,"adj":["c06013","c06033","c06041","c06045","c06055","c06095"]},"c06099":{"name":"Stanislaus","pop":552878,"adj":["c06001","c06009","c06043","c06047","c06077","c06085","c06109"]},"c06101":{"name":"Sutter","pop":99633,"adj":["c06007","c06011","c06061","c06067","c06113","c06115"]},"c06103":{"name":"Tehama","pop":65829,"adj":["c06007","c06021","c06045","c06063","c06089","c06105"]},"c06105":{"name":"Trinity","pop":16112,"adj":["c06023","c06045","c06089","c06093","c06103"]},"c06107":{"name":"Tulare","pop":473117,"adj":["c06019","c06027","c06029","c06031"]},"c06109":{"name":"Tuolumne","pop":55620,"adj":["c06003","c06009","c06039","c06043","c06051","c06099"]},"c06111":{"name":"Ventura","pop":843843,"adj":["c06029","c06037","c06083"]},"c06113":{"name":"Yolo","pop":216403,"adj":["c06011","c06033","c06055","c06067","c06095","c06101"]},"c06115":{"name":"Yuba","pop":81575,"adj":["c06007","c06057","c06061","c06063","c06091","c06101"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -197,7 +212,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -244,21 +261,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -313,7 +337,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

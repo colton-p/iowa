@@ -4,6 +4,7 @@
 Problem: Divide a state of n counties into k contiguous groups such that the populations of the groups are balanced.
 - maximize the size of the smallest group
 
+[Try the interactive maps.](https://colton-p.github.io/iowa/)
 
 try:
 ```

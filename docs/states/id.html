@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="251.91595797908408" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 6.970286857111366,291.408545231324 L 8.709043279353132,288.2695103554788 L 9.826305554357308,290.85937521531207 L 13.817010789802094,293.5608712470588 L 19.59047216752679,293.0674769612798 L 27.7511128983648,293.50670896231844 L 28.834406668924903,303.33199781620976 L 28.319306880492732,313.17649279727937 L 26.688937423578345,313.0858858816488 L 26.253233760460905,322.5911102510637 L 23.533717245506153,321.5644465522221 L 21.941639885721564,317.876352036375 L 15.760855520595872,311.40639658021234 L 13.51931522113595,304.74351818200205 L 10.823995190568857,304.10033789330333 L 6.4102633776187785,299.4828843697803 L 6.970286857111366,291.408545231324 z" id="c16027" />
@@ -53,124 +57,135 @@
 		<path d="M 227.5238896675343,388.1155516186163 L 230.55932881073377,380.0001822270002 L 228.57031685127305,376.41184774431514 L 227.74187651034597,366.98295868414885 L 238.11673055134324,366.4919730240539 L 241.82604369570998,368.56181346536687 L 243.3886237845837,365.7537308027897 L 243.72619339939288,372.73618566933783 L 246.38114040754706,372.9946982733865 L 251.58516906879368,370.63829051635196 L 251.64270785772794,379.8958749609726 L 251.91595797908408,399.47002186268725 L 238.1732101123936,399.661445731081 L 234.09192099492986,399.7618454382454 L 232.56309719164156,399.7769352549642 L 232.56281012720805,399.7769380272697 L 231.9533928711194,395.5750891642811 L 228.69354274847316,394.21563675952507 L 227.5238896675343,388.1155516186163 z" id="c16007" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'id'</script>
-<script>const COUNTY_DATA={"c16001":{"name":"Ada","pop":494967,"adj":["c16015","c16027","c16039","c16045","c16073"]},"c16003":{"name":"Adams","pop":4379,"adj":["c16045","c16049","c16085","c16087","c41001","c41063"]},"c16005":{"name":"Bannock","pop":87018,"adj":["c16011","c16029","c16041","c16071","c16077"]},"c16007":{"name":"Bear Lake","pop":6372,"adj":["c16029","c16041","c49005","c49033","c56023"]},"c16009":{"name":"Benewah","pop":9530,"adj":["c16055","c16057","c16079","c53063","c53075"]},"c16011":{"name":"Bingham","pop":47992,"adj":["c16005","c16013","c16019","c16023","c16029","c16051","c16077"]},"c16013":{"name":"Blaine","pop":24272,"adj":["c16011","c16023","c16025","c16031","c16037","c16039","c16063","c16067","c16077"]},"c16015":{"name":"Boise","pop":7610,"adj":["c16001","c16037","c16039","c16045","c16085"]},"c16017":{"name":"Bonner","pop":47110,"adj":["c16021","c16055","c16079","c30053","c30089","c53051","c53063"]},"c16019":{"name":"Bonneville","pop":123964,"adj":["c16011","c16029","c16051","c16065","c16081","c56023","c56039"]},"c16021":{"name":"Boundary","pop":12056,"adj":["c16017","c30053","c53051"]},"c16023":{"name":"Butte","pop":2574,"adj":["c16011","c16013","c16033","c16037","c16051","c16059"]},"c16025":{"name":"Camas","pop":1077,"adj":["c16013","c16039","c16047","c16063"]},"c16027":{"name":"Canyon","pop":231105,"adj":["c16001","c16045","c16073","c16075","c41045"]},"c16029":{"name":"Caribou","pop":7027,"adj":["c16005","c16007","c16011","c16019","c16041","c56023"]},"c16031":{"name":"Cassia","pop":24655,"adj":["c16013","c16053","c16067","c16071","c16077","c16083","c32007","c49003"]},"c16033":{"name":"Clark","pop":790,"adj":["c16023","c16043","c16051","c16059","c30001"]},"c16035":{"name":"Clearwater","pop":8734,"adj":["c16049","c16057","c16061","c16069","c16079","c30061","c30063"]},"c16037":{"name":"Custer","pop":4275,"adj":["c16013","c16015","c16023","c16039","c16059","c16085"]},"c16039":{"name":"Elmore","pop":28666,"adj":["c16001","c16013","c16015","c16025","c16037","c16047","c16073","c16083"]},"c16041":{"name":"Franklin","pop":14194,"adj":["c16005","c16007","c16029","c16071","c49005","c49033"]},"c16043":{"name":"Fremont","pop":13388,"adj":["c16033","c16051","c16065","c16081","c30001","c30031","c30057","c56039"]},"c16045":{"name":"Gem","pop":19123,"adj":["c16001","c16003","c16015","c16027","c16075","c16085","c16087"]},"c16047":{"name":"Gooding","pop":15598,"adj":["c16025","c16039","c16053","c16063","c16083"]},"c16049":{"name":"Idaho","pop":16541,"adj":["c16003","c16035","c16059","c16061","c16069","c16085","c30063","c30081","c41063"]},"c16051":{"name":"Jefferson","pop":30891,"adj":["c16011","c16019","c16023","c16033","c16043","c16065"]},"c16053":{"name":"Jerome","pop":24237,"adj":["c16031","c16047","c16063","c16067","c16083"]},"c16055":{"name":"Kootenai","pop":171362,"adj":["c16009","c16017","c16079","c53063"]},"c16057":{"name":"Latah","pop":39517,"adj":["c16009","c16035","c16069","c16079","c53075"]},"c16059":{"name":"Lemhi","pop":7974,"adj":["c16023","c16033","c16037","c16049","c16085","c30001","c30081"]},"c16061":{"name":"Lewis","pop":3533,"adj":["c16035","c16049","c16069"]},"c16063":{"name":"Lincoln","pop":5127,"adj":["c16013","c16025","c16047","c16053","c16067"]},"c16065":{"name":"Madison","pop":52913,"adj":["c16019","c16043","c16051","c16081"]},"c16067":{"name":"Minidoka","pop":21613,"adj":["c16013","c16031","c16053","c16063"]},"c16069":{"name":"Nez Perce","pop":42090,"adj":["c16035","c16049","c16057","c16061","c41063","c53003","c53075"]},"c16071":{"name":"Oneida","pop":4564,"adj":["c16005","c16031","c16041","c16077","c49003","c49005"]},"c16073":{"name":"Owyhee","pop":11913,"adj":["c16001","c16027","c16039","c16083","c32007","c32013","c41045"]},"c16075":{"name":"Payette","pop":25386,"adj":["c16027","c16045","c16087","c41045"]},"c16077":{"name":"Power","pop":7878,"adj":["c16005","c16011","c16013","c16031","c16071"]},"c16079":{"name":"Shoshone","pop":13169,"adj":["c16009","c16017","c16035","c16055","c16057","c30061","c30089"]},"c16081":{"name":"Teton","pop":11630,"adj":["c16019","c16043","c16065","c56039"]},"c16083":{"name":"Twin Falls","pop":90046,"adj":["c16031","c16039","c16047","c16053","c16073","c32007"]},"c16085":{"name":"Valley","pop":11746,"adj":["c16003","c16015","c16037","c16045","c16049","c16059"]},"c16087":{"name":"Washington","pop":10500,"adj":["c16003","c16045","c16075","c41001","c41045"]}}; </script>
+<script>const COUNTY_DATA = {"c16001":{"name":"Ada","pop":494967,"adj":["c16015","c16027","c16039","c16045","c16073"]},"c16003":{"name":"Adams","pop":4379,"adj":["c16045","c16049","c16085","c16087","c41001","c41063"]},"c16005":{"name":"Bannock","pop":87018,"adj":["c16011","c16029","c16041","c16071","c16077"]},"c16007":{"name":"Bear Lake","pop":6372,"adj":["c16029","c16041","c49005","c49033","c56023"]},"c16009":{"name":"Benewah","pop":9530,"adj":["c16055","c16057","c16079","c53063","c53075"]},"c16011":{"name":"Bingham","pop":47992,"adj":["c16005","c16013","c16019","c16023","c16029","c16051","c16077"]},"c16013":{"name":"Blaine","pop":24272,"adj":["c16011","c16023","c16025","c16031","c16037","c16039","c16063","c16067","c16077"]},"c16015":{"name":"Boise","pop":7610,"adj":["c16001","c16037","c16039","c16045","c16085"]},"c16017":{"name":"Bonner","pop":47110,"adj":["c16021","c16055","c16079","c30053","c30089","c53051","c53063"]},"c16019":{"name":"Bonneville","pop":123964,"adj":["c16011","c16029","c16051","c16065","c16081","c56023","c56039"]},"c16021":{"name":"Boundary","pop":12056,"adj":["c16017","c30053","c53051"]},"c16023":{"name":"Butte","pop":2574,"adj":["c16011","c16013","c16033","c16037","c16051","c16059"]},"c16025":{"name":"Camas","pop":1077,"adj":["c16013","c16039","c16047","c16063"]},"c16027":{"name":"Canyon","pop":231105,"adj":["c16001","c16045","c16073","c16075","c41045"]},"c16029":{"name":"Caribou","pop":7027,"adj":["c16005","c16007","c16011","c16019","c16041","c56023"]},"c16031":{"name":"Cassia","pop":24655,"adj":["c16013","c16053","c16067","c16071","c16077","c16083","c32007","c49003"]},"c16033":{"name":"Clark","pop":790,"adj":["c16023","c16043","c16051","c16059","c30001"]},"c16035":{"name":"Clearwater","pop":8734,"adj":["c16049","c16057","c16061","c16069","c16079","c30061","c30063"]},"c16037":{"name":"Custer","pop":4275,"adj":["c16013","c16015","c16023","c16039","c16059","c16085"]},"c16039":{"name":"Elmore","pop":28666,"adj":["c16001","c16013","c16015","c16025","c16037","c16047","c16073","c16083"]},"c16041":{"name":"Franklin","pop":14194,"adj":["c16005","c16007","c16029","c16071","c49005","c49033"]},"c16043":{"name":"Fremont","pop":13388,"adj":["c16033","c16051","c16065","c16081","c30001","c30031","c30057","c56039"]},"c16045":{"name":"Gem","pop":19123,"adj":["c16001","c16003","c16015","c16027","c16075","c16085","c16087"]},"c16047":{"name":"Gooding","pop":15598,"adj":["c16025","c16039","c16053","c16063","c16083"]},"c16049":{"name":"Idaho","pop":16541,"adj":["c16003","c16035","c16059","c16061","c16069","c16085","c30063","c30081","c41063"]},"c16051":{"name":"Jefferson","pop":30891,"adj":["c16011","c16019","c16023","c16033","c16043","c16065"]},"c16053":{"name":"Jerome","pop":24237,"adj":["c16031","c16047","c16063","c16067","c16083"]},"c16055":{"name":"Kootenai","pop":171362,"adj":["c16009","c16017","c16079","c53063"]},"c16057":{"name":"Latah","pop":39517,"adj":["c16009","c16035","c16069","c16079","c53075"]},"c16059":{"name":"Lemhi","pop":7974,"adj":["c16023","c16033","c16037","c16049","c16085","c30001","c30081"]},"c16061":{"name":"Lewis","pop":3533,"adj":["c16035","c16049","c16069"]},"c16063":{"name":"Lincoln","pop":5127,"adj":["c16013","c16025","c16047","c16053","c16067"]},"c16065":{"name":"Madison","pop":52913,"adj":["c16019","c16043","c16051","c16081"]},"c16067":{"name":"Minidoka","pop":21613,"adj":["c16013","c16031","c16053","c16063"]},"c16069":{"name":"Nez Perce","pop":42090,"adj":["c16035","c16049","c16057","c16061","c41063","c53003","c53075"]},"c16071":{"name":"Oneida","pop":4564,"adj":["c16005","c16031","c16041","c16077","c49003","c49005"]},"c16073":{"name":"Owyhee","pop":11913,"adj":["c16001","c16027","c16039","c16083","c32007","c32013","c41045"]},"c16075":{"name":"Payette","pop":25386,"adj":["c16027","c16045","c16087","c41045"]},"c16077":{"name":"Power","pop":7878,"adj":["c16005","c16011","c16013","c16031","c16071"]},"c16079":{"name":"Shoshone","pop":13169,"adj":["c16009","c16017","c16035","c16055","c16057","c30061","c30089"]},"c16081":{"name":"Teton","pop":11630,"adj":["c16019","c16043","c16065","c56039"]},"c16083":{"name":"Twin Falls","pop":90046,"adj":["c16031","c16039","c16047","c16053","c16073","c32007"]},"c16085":{"name":"Valley","pop":11746,"adj":["c16003","c16015","c16037","c16045","c16049","c16059"]},"c16087":{"name":"Washington","pop":10500,"adj":["c16003","c16045","c16075","c41001","c41045"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -183,7 +198,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -230,21 +247,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -299,7 +323,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="265.3735756220135" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 150.6657786890985,152.743849187936 L 150.80009094361543,113.29789615284568 L 151.21061698543252,99.27640163267088 L 151.5060828508342,63.852511663103094 L 151.93914400347188,62.82123853968427 L 151.97129703940033,60.80620385397397 L 170.34111445438947,60.99969934833216 L 170.23117430287883,79.8664391395078 L 176.84686525554775,110.39292979546873 L 184.05109996617543,110.39368744107688 L 184.01899644410682,116.64188322641623 L 185.75547112795056,125.93716852857335 L 184.06915258134194,132.928544615435 L 184.9064626473236,140.61628209922645 L 182.15221753016797,147.83620498373543 L 180.72369107940165,165.01618393091704 L 150.17490946450334,164.81212302314904 L 150.6657786890985,152.743849187936 z" id="c32011" />
@@ -26,124 +30,135 @@
 		<path d="M 0.24100188619707968,163.07863736694796 L 10.88577847247426,163.5085693736282 L 20.08082635298094,165.5212787614996 L 30.627541918118897,166.09186683877425 L 30.535624281294318,169.72841122416648 L 26.423515087972298,171.60108765668258 L 24.507762143156476,177.26287813994688 L 28.11543004805822,186.07361152733833 L 28.60349904533516,197.13484121696038 L 17.638307311974785,186.5378396355119 L 17.541479149721695,186.44386301102512 L 4.091441730204917,173.4366080789653 L 0.0,169.48268774949827 L 0.1445948409185777,165.63728362278377 L 0.24100188619707968,163.07863736694796 z" id="c32005" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'nv'</script>
-<script>const COUNTY_DATA={"c32001":{"name":"Churchill","pop":25516,"adj":["c32015","c32019","c32021","c32023","c32027","c32031"]},"c32003":{"name":"Clark","pop":2265461,"adj":["c04015","c06027","c06071","c32017","c32023"]},"c32005":{"name":"Douglas","pop":49488,"adj":["c06003","c06017","c06051","c06061","c32019","c32510"]},"c32007":{"name":"Elko","pop":53702,"adj":["c16031","c16073","c16083","c32011","c32013","c32015","c32033","c49003","c49045"]},"c32009":{"name":"Esmeralda","pop":729,"adj":["c06027","c06051","c32021","c32023"]},"c32011":{"name":"Eureka","pop":1855,"adj":["c32007","c32015","c32023","c32033"]},"c32013":{"name":"Humboldt","pop":17285,"adj":["c16073","c32007","c32015","c32027","c32031","c41025","c41045"]},"c32015":{"name":"Lander","pop":5734,"adj":["c32001","c32007","c32011","c32013","c32023","c32027"]},"c32017":{"name":"Lincoln","pop":4499,"adj":["c04015","c32003","c32023","c32033","c49001","c49021","c49027","c49053"]},"c32019":{"name":"Lyon","pop":59235,"adj":["c06051","c32001","c32005","c32021","c32029","c32031","c32510"]},"c32021":{"name":"Mineral","pop":4554,"adj":["c06051","c32001","c32009","c32019","c32023"]},"c32023":{"name":"Nye","pop":51591,"adj":["c06027","c32001","c32003","c32009","c32011","c32015","c32017","c32021","c32033"]},"c32027":{"name":"Pershing","pop":6650,"adj":["c32001","c32013","c32015","c32031"]},"c32029":{"name":"Storey","pop":4104,"adj":["c32019","c32031","c32510"]},"c32031":{"name":"Washoe","pop":486492,"adj":["c06035","c06049","c06057","c06061","c06091","c32001","c32013","c32019","c32027","c32029","c32510","c41025","c41037"]},"c32033":{"name":"White Pine","pop":9080,"adj":["c32007","c32011","c32017","c32023","c49023","c49027","c49045"]},"c32510":{"name":"Carson City","pop":58639,"adj":["c06061","c32005","c32019","c32029","c32031"]}}; </script>
+<script>const COUNTY_DATA = {"c32001":{"name":"Churchill","pop":25516,"adj":["c32015","c32019","c32021","c32023","c32027","c32031"]},"c32003":{"name":"Clark","pop":2265461,"adj":["c04015","c06027","c06071","c32017","c32023"]},"c32005":{"name":"Douglas","pop":49488,"adj":["c06003","c06017","c06051","c06061","c32019","c32510"]},"c32007":{"name":"Elko","pop":53702,"adj":["c16031","c16073","c16083","c32011","c32013","c32015","c32033","c49003","c49045"]},"c32009":{"name":"Esmeralda","pop":729,"adj":["c06027","c06051","c32021","c32023"]},"c32011":{"name":"Eureka","pop":1855,"adj":["c32007","c32015","c32023","c32033"]},"c32013":{"name":"Humboldt","pop":17285,"adj":["c16073","c32007","c32015","c32027","c32031","c41025","c41045"]},"c32015":{"name":"Lander","pop":5734,"adj":["c32001","c32007","c32011","c32013","c32023","c32027"]},"c32017":{"name":"Lincoln","pop":4499,"adj":["c04015","c32003","c32023","c32033","c49001","c49021","c49027","c49053"]},"c32019":{"name":"Lyon","pop":59235,"adj":["c06051","c32001","c32005","c32021","c32029","c32031","c32510"]},"c32021":{"name":"Mineral","pop":4554,"adj":["c06051","c32001","c32009","c32019","c32023"]},"c32023":{"name":"Nye","pop":51591,"adj":["c06027","c32001","c32003","c32009","c32011","c32015","c32017","c32021","c32033"]},"c32027":{"name":"Pershing","pop":6650,"adj":["c32001","c32013","c32015","c32031"]},"c32029":{"name":"Storey","pop":4104,"adj":["c32019","c32031","c32510"]},"c32031":{"name":"Washoe","pop":486492,"adj":["c06035","c06049","c06057","c06061","c06091","c32001","c32013","c32019","c32027","c32029","c32510","c41025","c41037"]},"c32033":{"name":"White Pine","pop":9080,"adj":["c32007","c32011","c32017","c32023","c49023","c49027","c49045"]},"c32510":{"name":"Carson City","pop":58639,"adj":["c06061","c32005","c32019","c32029","c32031"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -156,7 +171,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -203,21 +220,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -272,7 +296,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

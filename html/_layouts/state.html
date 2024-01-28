@@ -1,34 +1,49 @@
 <html>
 
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
 <body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            {% include svgs/{{page.state}}.svg %}
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
 
-<div style="display: flex">
-    <div>
-        {% include svgs/{{page.state}}.svg %}
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    {% for st in site.data.states %}
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        {% for st in site.data.states %}
         <a href="{{st.state}}.html">{{st.state}}</a>
-    {% endfor %}
-</footer>
+        {% endfor %}
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = '{{page.state}}'</script>
-<script>const COUNTY_DATA={{site.data.adj[page.state] | jsonify }}; </script>
+<script>const COUNTY_DATA = {{ site.data.adj[page.state] | jsonify }}; </script>
 <script>{% include main.js %} </script>
 
 </html>

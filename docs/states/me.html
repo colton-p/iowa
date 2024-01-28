@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="400.0" stroke="#ffffff" stroke-width="1" version="1.1" width="267.3714147717538" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 35.82363883320492,308.98486485707593 L 42.17875666991504,300.614833328562 L 46.664346019724825,295.7047781720811 L 52.82086803392771,272.9421526710756 L 55.41857629211935,271.2311878337153 L 60.0369950920048,270.5068851468018 L 61.74202146325187,279.9859708753824 L 59.61630427253075,281.08370929559203 L 61.66963921251057,284.4835246684124 L 63.295917729487726,288.5782170239328 L 64.02805336858894,297.58166615319413 L 68.39340934587973,298.6844275619764 L 67.5319530474185,303.7923812018359 L 65.49388594623912,315.009409896336 L 64.25238836902349,315.93297295439703 L 65.38603155482508,317.3540707487666 L 62.22615281228372,321.7901582304396 L 59.87896825690298,323.5491460499427 L 52.520378320012654,317.24551636333854 L 46.96727915971114,311.30119876765707 L 43.66547229151946,315.9212406935888 L 36.102120101594465,311.57452650967195 L 35.82363883320492,308.98486485707593 z" id="c23001" />
@@ -25,124 +29,135 @@
 		<path d="M 16.3348024525346,196.34081443767863 L 17.765074060988844,194.12677553997426 L 17.14364171682004,191.38153904147816 L 18.087779814530407,188.19722646600948 L 16.903434950414937,185.9918236141793 L 19.82437979590415,183.25438640733782 L 21.483507202859855,183.55703623250824 L 23.05653078228971,186.25258377218952 L 26.38952215715987,186.8007782201821 L 29.152770041255305,187.85803046265332 L 29.206130097331062,183.81768522212067 L 26.73198341997083,181.50391574164044 L 23.760472090554153,176.1201248858769 L 26.153928400532436,171.2864431124432 L 28.717068305583624,168.2320197516114 L 32.533637907248874,165.3704242572825 L 35.08555164360479,162.0304338791707 L 36.91353644010037,176.30920598397552 L 42.547172887724386,210.09811281530722 L 49.69991714345975,208.51015116684636 L 50.53967108473101,213.39872955109797 L 59.27205539832435,211.895036345708 L 62.11243395386098,228.50207207848425 L 59.50540542509575,233.12966661182097 L 60.66602439242096,237.29642199311715 L 66.97102119487027,236.1603664320296 L 69.06563360642515,253.2917716032792 L 71.42086482954906,252.9937526014076 L 73.24357223340832,259.4566559566427 L 72.13313453538727,262.0418471719381 L 71.68105302682774,262.733575080149 L 66.04834709010711,261.3724396104206 L 65.95104869042831,262.9423424219119 L 63.84899164216442,266.7337566856678 L 66.2093224501535,268.71964842915173 L 65.72517772938166,270.79835502646955 L 60.0369950920048,270.5068851468018 L 55.41857629211935,271.2311878337153 L 52.82086803392771,272.9421526710756 L 52.12337524186539,268.8641547332632 L 48.48224922374405,265.63425702446574 L 50.30370137142238,262.7732439210028 L 32.817264997686095,258.60550166277136 L 35.424510284058506,257.1632407651494 L 29.011717756131194,241.60588998085964 L 18.820279735867217,247.1275684942137 L 18.79075027085602,237.29435615375687 L 16.013932109105372,221.30625593278174 L 18.863419653360047,220.967703354243 L 16.02196510451652,197.71667955737067 L 16.3348024525346,196.34081443767863 z" id="c23007" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'me'</script>
-<script>const COUNTY_DATA={"c23001":{"name":"Androscoggin","pop":111139,"adj":["c23005","c23007","c23011","c23017","c23023"]},"c23003":{"name":"Aroostook","pop":67105,"adj":["c23019","c23021","c23025","c23029"]},"c23005":{"name":"Cumberland","pop":303069,"adj":["c23001","c23017","c23023","c23031"]},"c23007":{"name":"Franklin","pop":29456,"adj":["c23001","c23011","c23017","c23025"]},"c23009":{"name":"Hancock","pop":55478,"adj":["c23013","c23019","c23027","c23029"]},"c23011":{"name":"Kennebec","pop":123642,"adj":["c23001","c23007","c23015","c23023","c23025","c23027"]},"c23013":{"name":"Knox","pop":40607,"adj":["c23009","c23015","c23027"]},"c23015":{"name":"Lincoln","pop":35237,"adj":["c23011","c23013","c23023","c23027"]},"c23017":{"name":"Oxford","pop":57777,"adj":["c23001","c23005","c23007","c23031","c33003","c33007"]},"c23019":{"name":"Penobscot","pop":152199,"adj":["c23003","c23009","c23021","c23025","c23027","c23029"]},"c23021":{"name":"Piscataquis","pop":16800,"adj":["c23003","c23019","c23025"]},"c23023":{"name":"Sagadahoc","pop":36699,"adj":["c23001","c23005","c23011","c23015"]},"c23025":{"name":"Somerset","pop":50477,"adj":["c23003","c23007","c23011","c23019","c23021","c23027"]},"c23027":{"name":"Waldo","pop":39607,"adj":["c23009","c23011","c23013","c23015","c23019","c23025"]},"c23029":{"name":"Washington","pop":31095,"adj":["c23003","c23009","c23019"]},"c23031":{"name":"York","pop":211972,"adj":["c23005","c23017","c33003","c33015","c33017"]}}; </script>
+<script>const COUNTY_DATA = {"c23001":{"name":"Androscoggin","pop":111139,"adj":["c23005","c23007","c23011","c23017","c23023"]},"c23003":{"name":"Aroostook","pop":67105,"adj":["c23019","c23021","c23025","c23029"]},"c23005":{"name":"Cumberland","pop":303069,"adj":["c23001","c23017","c23023","c23031"]},"c23007":{"name":"Franklin","pop":29456,"adj":["c23001","c23011","c23017","c23025"]},"c23009":{"name":"Hancock","pop":55478,"adj":["c23013","c23019","c23027","c23029"]},"c23011":{"name":"Kennebec","pop":123642,"adj":["c23001","c23007","c23015","c23023","c23025","c23027"]},"c23013":{"name":"Knox","pop":40607,"adj":["c23009","c23015","c23027"]},"c23015":{"name":"Lincoln","pop":35237,"adj":["c23011","c23013","c23023","c23027"]},"c23017":{"name":"Oxford","pop":57777,"adj":["c23001","c23005","c23007","c23031","c33003","c33007"]},"c23019":{"name":"Penobscot","pop":152199,"adj":["c23003","c23009","c23021","c23025","c23027","c23029"]},"c23021":{"name":"Piscataquis","pop":16800,"adj":["c23003","c23019","c23025"]},"c23023":{"name":"Sagadahoc","pop":36699,"adj":["c23001","c23005","c23011","c23015"]},"c23025":{"name":"Somerset","pop":50477,"adj":["c23003","c23007","c23011","c23019","c23021","c23027"]},"c23027":{"name":"Waldo","pop":39607,"adj":["c23009","c23011","c23013","c23015","c23019","c23025"]},"c23029":{"name":"Washington","pop":31095,"adj":["c23003","c23009","c23019"]},"c23031":{"name":"York","pop":211972,"adj":["c23005","c23017","c33003","c33015","c33017"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -155,7 +170,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -202,21 +219,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -271,7 +295,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

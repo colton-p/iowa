@@ -13,9 +13,23 @@
             background-color: palegreen;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
 
 <body>
+    <h3>iowa</h3>
+    <div>
+        <span>Interactive maps to explore the following problem:</span>
+        <ul>
+            <li>Problem: Divide a state of <code>n</code> counties into <code>k</code> contiguous groups such that the populations of the groups are balanced.</li>
+            <li>Goal: Maximize the size of the smallest group.</li>
+            <li>Scoring: largest difference between group size and <code>1 / k</code> total population.</li>
+        </ul>
+        <span>
+            In the table below, <span class="opt">peach scores</span> are optimal, <span class="mine">green scores</span> are your best scores.
+        </span>
+    </div>
+
     <table>
         <thead>
             <th>states</th>
@@ -26,7 +40,7 @@
         <tbody>
             {% for row in site.data.states %}
             <tr id={{row.state}}>
-                <td><a href="states/{{row.state}}.html">{{row.state}}</a></td>
+                <td><a href="states/{{row.state}}.html">{{row.state | upcase}}</a></td>
                 <td>{{site.data.adj[row.state] | size}}</td>
                 <td class="{% if row.opt2 %}opt {%endif%}">{{row.score2}}</td>
                 <td class="{% if row.opt4 %}opt {%endif%}">{{row.score4}}</td>
@@ -35,6 +49,9 @@
         </tbody>
     </table>
 </body>
+<footer>
+    <a href="https://github.com/colton-p/iowa">github</a>
+</footer>
 <script>
     const tds = Array.from(document.getElementsByTagName('tr'));
     tds.forEach(td => {

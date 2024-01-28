@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="210.4375937439956" stroke="#ffffff" stroke-width="1" version="1.1" width="400.0" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 345.1271921122914,195.74236682966657 L 356.06850693925736,190.0822545973616 L 355.44641361172916,179.7984346780278 L 349.1860085194742,168.37681274928224 L 371.71145676196994,166.65077338374445 L 376.56109772278796,159.76712962996027 L 373.49390637864036,147.92672496110126 L 387.62455385567443,147.82216717314623 L 400.0,147.53794189725372 L 396.99099850649907,162.2482592945506 L 395.4387019681034,163.7505903423191 L 391.99330183885183,174.32245055486064 L 389.09428794905153,184.81390105859748 L 387.6782348936752,188.76343263965774 L 383.415037902798,196.7818956331015 L 348.6280426382619,201.1845052081566 L 345.1271921122914,195.74236682966657 z" id="c24047" />
@@ -33,124 +37,135 @@
 		<path d="M 234.76543549398335,156.4915843061805 L 244.09239608138762,142.2888486206752 L 252.62959639384152,143.7995007877938 L 258.6241823150377,152.4445454549224 L 268.3534274688711,158.38720500059105 L 272.75910923902063,166.13848313599755 L 277.58685453036003,164.3998562144598 L 277.3480327302192,165.37809472091692 L 279.941251136279,167.09661376755267 L 278.33209940710805,173.64386176574826 L 281.9428490492991,180.71391105866826 L 285.015207088924,185.28052342310713 L 284.0775742812643,189.78553192803278 L 284.9241860465548,197.02411472661151 L 280.3577965494379,192.09121676282928 L 274.98497857225675,187.53500399958426 L 270.37696785630317,187.96721800195746 L 264.9493099878154,183.71622797549932 L 260.341693604736,176.6787933046544 L 252.79843079132945,174.38122416162653 L 246.74159672920598,174.3054353626962 L 240.74448492528504,172.35457064881277 L 238.82578654040577,171.66368390279274 L 234.76543549398335,156.4915843061805 z" id="c24037" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'md'</script>
-<script>const COUNTY_DATA={"c24001":{"name":"Allegany","pop":68106,"adj":["c24023","c24043","c42009","c42057","c42111","c54027","c54057","c54065"]},"c24003":{"name":"Anne Arundel","pop":588261,"adj":["c24005","c24009","c24027","c24029","c24033","c24035","c24041","c24510"]},"c24005":{"name":"Baltimore","pop":854535,"adj":["c24003","c24013","c24025","c24027","c24029","c24510","c42133"]},"c24009":{"name":"Calvert","pop":92783,"adj":["c24003","c24017","c24019","c24033","c24037","c24041"]},"c24011":{"name":"Caroline","pop":33293,"adj":["c10001","c10005","c24019","c24035","c24041"]},"c24013":{"name":"Carroll","pop":172891,"adj":["c24005","c24021","c24027","c42001","c42133"]},"c24015":{"name":"Cecil","pop":103725,"adj":["c10003","c24025","c24029","c42029","c42071"]},"c24017":{"name":"Charles","pop":166617,"adj":["c24009","c24033","c24037","c51059","c51099","c51153","c51179","c51193"]},"c24019":{"name":"Dorchester","pop":32531,"adj":["c10005","c24009","c24011","c24037","c24039","c24041","c24045"]},"c24021":{"name":"Frederick","pop":271717,"adj":["c24013","c24027","c24031","c24043","c42001","c42055","c51107"]},"c24023":{"name":"Garrett","pop":28806,"adj":["c24001","c42051","c42111","c54023","c54057","c54077"]},"c24025":{"name":"Harford","pop":260924,"adj":["c24005","c24015","c24029","c42071","c42133"]},"c24027":{"name":"Howard","pop":332317,"adj":["c24003","c24005","c24013","c24021","c24031","c24033"]},"c24029":{"name":"Kent","pop":19198,"adj":["c10001","c10003","c24003","c24005","c24015","c24025","c24035"]},"c24031":{"name":"Montgomery","pop":1062061,"adj":["c11001","c24021","c24027","c24033","c51013","c51059","c51107"]},"c24033":{"name":"Prince George's","pop":967201,"adj":["c11001","c24003","c24009","c24017","c24027","c24031","c51059","c51510"]},"c24035":{"name":"Queen Anne's","pop":49874,"adj":["c10001","c24003","c24011","c24029","c24041"]},"c24037":{"name":"St. Mary's","pop":113777,"adj":["c24009","c24017","c24019","c24039","c51133","c51193"]},"c24039":{"name":"Somerset","pop":24620,"adj":["c24019","c24037","c24045","c24047","c51001","c51133"]},"c24041":{"name":"Talbot","pop":37526,"adj":["c24003","c24009","c24011","c24019","c24035"]},"c24043":{"name":"Washington","pop":154705,"adj":["c24001","c24021","c42055","c42057","c51107","c54003","c54037","c54065"]},"c24045":{"name":"Wicomico","pop":103588,"adj":["c10005","c24019","c24039","c24047"]},"c24047":{"name":"Worcester","pop":52460,"adj":["c10005","c24039","c24045","c51001"]},"c24510":{"name":"Baltimore city","pop":585708,"adj":["c24003","c24005"]}}; </script>
+<script>const COUNTY_DATA = {"c24001":{"name":"Allegany","pop":68106,"adj":["c24023","c24043","c42009","c42057","c42111","c54027","c54057","c54065"]},"c24003":{"name":"Anne Arundel","pop":588261,"adj":["c24005","c24009","c24027","c24029","c24033","c24035","c24041","c24510"]},"c24005":{"name":"Baltimore","pop":854535,"adj":["c24003","c24013","c24025","c24027","c24029","c24510","c42133"]},"c24009":{"name":"Calvert","pop":92783,"adj":["c24003","c24017","c24019","c24033","c24037","c24041"]},"c24011":{"name":"Caroline","pop":33293,"adj":["c10001","c10005","c24019","c24035","c24041"]},"c24013":{"name":"Carroll","pop":172891,"adj":["c24005","c24021","c24027","c42001","c42133"]},"c24015":{"name":"Cecil","pop":103725,"adj":["c10003","c24025","c24029","c42029","c42071"]},"c24017":{"name":"Charles","pop":166617,"adj":["c24009","c24033","c24037","c51059","c51099","c51153","c51179","c51193"]},"c24019":{"name":"Dorchester","pop":32531,"adj":["c10005","c24009","c24011","c24037","c24039","c24041","c24045"]},"c24021":{"name":"Frederick","pop":271717,"adj":["c24013","c24027","c24031","c24043","c42001","c42055","c51107"]},"c24023":{"name":"Garrett","pop":28806,"adj":["c24001","c42051","c42111","c54023","c54057","c54077"]},"c24025":{"name":"Harford","pop":260924,"adj":["c24005","c24015","c24029","c42071","c42133"]},"c24027":{"name":"Howard","pop":332317,"adj":["c24003","c24005","c24013","c24021","c24031","c24033"]},"c24029":{"name":"Kent","pop":19198,"adj":["c10001","c10003","c24003","c24005","c24015","c24025","c24035"]},"c24031":{"name":"Montgomery","pop":1062061,"adj":["c11001","c24021","c24027","c24033","c51013","c51059","c51107"]},"c24033":{"name":"Prince George's","pop":967201,"adj":["c11001","c24003","c24009","c24017","c24027","c24031","c51059","c51510"]},"c24035":{"name":"Queen Anne's","pop":49874,"adj":["c10001","c24003","c24011","c24029","c24041"]},"c24037":{"name":"St. Mary's","pop":113777,"adj":["c24009","c24017","c24019","c24039","c51133","c51193"]},"c24039":{"name":"Somerset","pop":24620,"adj":["c24019","c24037","c24045","c24047","c51001","c51133"]},"c24041":{"name":"Talbot","pop":37526,"adj":["c24003","c24009","c24011","c24019","c24035"]},"c24043":{"name":"Washington","pop":154705,"adj":["c24001","c24021","c42055","c42057","c51107","c54003","c54037","c54065"]},"c24045":{"name":"Wicomico","pop":103588,"adj":["c10005","c24019","c24039","c24047"]},"c24047":{"name":"Worcester","pop":52460,"adj":["c10005","c24039","c24045","c51001"]},"c24510":{"name":"Baltimore city","pop":585708,"adj":["c24003","c24005"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -163,7 +178,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -210,21 +227,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -279,7 +303,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

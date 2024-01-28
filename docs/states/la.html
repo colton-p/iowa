@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="377.42943170702006" stroke="#ffffff" stroke-width="1" version="1.1" width="400.0" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 109.24513455214827,235.10989465721516 L 113.05452268319566,228.26394884496034 L 112.25936254062208,197.55642992485053 L 119.31667467807411,197.64059209854966 L 121.63328199277777,192.48284115856913 L 129.3955962518957,188.02833234244196 L 137.48135681419012,191.44903092651123 L 140.81140120950096,202.23636563475128 L 142.79660070821313,202.21526291822966 L 145.94324236023397,209.66670565092136 L 145.88031378793502,218.33642808724926 L 142.71537245171174,228.03899161238326 L 138.59269518221163,230.7120366758996 L 122.94894425839443,231.56681664571587 L 120.16765894351191,235.9058974563844 L 109.10736832758775,235.72758049155357 L 109.24513455214827,235.10989465721516 z" id="c22039" />
@@ -73,124 +77,135 @@
 		<path d="M 243.63215941231294,299.67294935154774 L 245.4221450501469,296.16231254244474 L 248.60352607961786,291.81227013589466 L 248.5619032388127,289.24899935752774 L 257.2397296666254,287.67594276684764 L 266.9579861374427,290.64138426667324 L 269.13453326596283,290.07742792194153 L 277.12411993698396,290.96682741821576 L 281.1362170965105,294.40082466460274 L 282.11848702958025,298.4348225684441 L 289.8644811913972,302.44500615938074 L 291.5108410160505,308.29725466019465 L 301.4747104326735,308.5272526798812 L 307.30285592524456,309.8037858747207 L 307.71605453475246,318.0529302584245 L 304.96743754035595,320.3389188611664 L 308.9664591220177,328.2309683472451 L 318.4311505224152,332.61056049343523 L 317.7611814488142,341.49132168509664 L 320.316538613712,344.56709979557627 L 313.1178952277815,356.9708874966592 L 310.4781696300718,358.8576877417336 L 302.3830443096714,364.39031340601247 L 293.39723339362496,366.43115807684126 L 287.3734077269888,366.97496716822025 L 287.2435374025719,350.2874177049464 L 289.176049442881,338.671540431335 L 270.0929729825131,317.42328066028176 L 264.57715120500296,313.10554611204304 L 262.9380719125847,311.2712485853577 L 254.8636852513058,301.1377135906471 L 249.06319930127142,306.60253480877276 L 238.89565490737994,306.8247243028666 L 243.63215941231294,299.67294935154774 z" id="c22057" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'la'</script>
-<script>const COUNTY_DATA={"c22001":{"name":"Acadia Parish","pop":57576,"adj":["c22039","c22053","c22055","c22097","c22113"]},"c22003":{"name":"Allen Parish","pop":22750,"adj":["c22011","c22039","c22053","c22079","c22115"]},"c22005":{"name":"Ascension Parish","pop":126500,"adj":["c22007","c22033","c22047","c22063","c22093","c22095"]},"c22007":{"name":"Assumption Parish","pop":21039,"adj":["c22005","c22045","c22047","c22057","c22093","c22099","c22101","c22109"]},"c22009":{"name":"Avoyelles Parish","pop":39693,"adj":["c22025","c22029","c22039","c22059","c22077","c22079","c22097","c22125"]},"c22011":{"name":"Beauregard Parish","pop":36549,"adj":["c22003","c22019","c22053","c22115","c48351"]},"c22013":{"name":"Bienville Parish","pop":12981,"adj":["c22015","c22027","c22049","c22061","c22069","c22081","c22119","c22127"]},"c22015":{"name":"Bossier Parish","pop":128746,"adj":["c05073","c05091","c22013","c22017","c22081","c22119"]},"c22017":{"name":"Caddo Parish","pop":237848,"adj":["c05091","c22015","c22031","c22081","c48067","c48203","c48315","c48365"]},"c22019":{"name":"Calcasieu Parish","pop":216785,"adj":["c22011","c22023","c22053","c48351","c48361"]},"c22021":{"name":"Caldwell Parish","pop":9645,"adj":["c22025","c22041","c22049","c22059","c22073","c22083","c22127"]},"c22023":{"name":"Cameron Parish","pop":5617,"adj":["c22019","c22053","c22113","c48245","c48361"]},"c22025":{"name":"Catahoula Parish","pop":8906,"adj":["c22009","c22021","c22029","c22041","c22059","c22107"]},"c22027":{"name":"Claiborne Parish","pop":14170,"adj":["c05027","c05139","c22013","c22061","c22111","c22119"]},"c22029":{"name":"Concordia Parish","pop":18687,"adj":["c22009","c22025","c22077","c22107","c22125","c28001","c28157"]},"c22031":{"name":"De Soto Parish","pop":26812,"adj":["c22017","c22069","c22081","c22085","c48365","c48419"]},"c22033":{"name":"East Baton Rouge Parish","pop":456781,"adj":["c22005","c22037","c22047","c22063","c22091","c22121"]},"c22035":{"name":"East Carroll Parish","pop":7459,"adj":["c05017","c22065","c22083","c22123","c28055","c28149"]},"c22037":{"name":"East Feliciana Parish","pop":19539,"adj":["c22033","c22091","c22121","c22125","c28005","c28157"]},"c22039":{"name":"Evangeline Parish","pop":32350,"adj":["c22001","c22003","c22009","c22053","c22079","c22097"]},"c22041":{"name":"Franklin Parish","pop":19774,"adj":["c22021","c22025","c22065","c22083","c22107"]},"c22043":{"name":"Grant Parish","pop":22169,"adj":["c22059","c22069","c22079","c22127"]},"c22045":{"name":"Iberia Parish","pop":69929,"adj":["c22007","c22047","c22055","c22099","c22101","c22113"]},"c22047":{"name":"Iberville Parish","pop":30241,"adj":["c22005","c22007","c22033","c22045","c22077","c22099","c22121"]},"c22049":{"name":"Jackson Parish","pop":15031,"adj":["c22013","c22021","c22061","c22073","c22127"]},"c22051":{"name":"Jefferson Parish","pop":440781,"adj":["c22057","c22071","c22075","c22089","c22095","c22103","c22105"]},"c22053":{"name":"Jefferson Davis Parish","pop":32250,"adj":["c22001","c22003","c22011","c22019","c22023","c22039","c22113"]},"c22055":{"name":"Lafayette Parish","pop":241753,"adj":["c22001","c22045","c22097","c22099","c22113"]},"c22057":{"name":"Lafourche Parish","pop":97557,"adj":["c22007","c22051","c22089","c22093","c22095","c22109"]},"c22059":{"name":"LaSalle Parish","pop":14791,"adj":["c22009","c22021","c22025","c22043","c22079","c22127"]},"c22061":{"name":"Lincoln Parish","pop":48396,"adj":["c22013","c22027","c22049","c22073","c22111"]},"c22063":{"name":"Livingston Parish","pop":142282,"adj":["c22005","c22033","c22091","c22095","c22105"]},"c22065":{"name":"Madison Parish","pop":10017,"adj":["c22035","c22041","c22083","c22107","c28149"]},"c22067":{"name":"Morehouse Parish","pop":25629,"adj":["c05003","c05017","c05139","c22073","c22083","c22111","c22123"]},"c22069":{"name":"Natchitoches Parish","pop":37515,"adj":["c22013","c22031","c22043","c22079","c22081","c22085","c22115","c22127"]},"c22071":{"name":"Orleans Parish","pop":383997,"adj":["c22051","c22075","c22087","c22103"]},"c22073":{"name":"Ouachita Parish","pop":160368,"adj":["c22021","c22049","c22061","c22067","c22083","c22111"]},"c22075":{"name":"Plaquemines Parish","pop":23515,"adj":["c22051","c22071","c22087"]},"c22077":{"name":"Pointe Coupee Parish","pop":20758,"adj":["c22009","c22029","c22047","c22097","c22099","c22121","c22125"]},"c22079":{"name":"Rapides Parish","pop":130023,"adj":["c22003","c22009","c22039","c22043","c22059","c22069","c22115"]},"c22081":{"name":"Red River Parish","pop":7620,"adj":["c22013","c22015","c22017","c22031","c22069"]},"c22083":{"name":"Richland Parish","pop":20043,"adj":["c22021","c22035","c22041","c22065","c22067","c22073","c22123"]},"c22085":{"name":"Sabine Parish","pop":22155,"adj":["c22031","c22069","c22115","c48351","c48403","c48419"]},"c22087":{"name":"St. Bernard Parish","pop":43764,"adj":["c22071","c22075","c22103","c28045","c28047"]},"c22089":{"name":"St. Charles Parish","pop":52549,"adj":["c22051","c22057","c22095","c22105"]},"c22091":{"name":"St. Helena Parish","pop":10920,"adj":["c22033","c22037","c22063","c22105","c28005"]},"c22093":{"name":"St. James Parish","pop":20192,"adj":["c22005","c22007","c22057","c22095"]},"c22095":{"name":"St. John the Baptist Parish","pop":42477,"adj":["c22005","c22051","c22057","c22063","c22089","c22093","c22105"]},"c22097":{"name":"St. Landry Parish","pop":82540,"adj":["c22001","c22009","c22039","c22055","c22077","c22099"]},"c22099":{"name":"St. Martin Parish","pop":51767,"adj":["c22007","c22045","c22047","c22055","c22077","c22097","c22101"]},"c22101":{"name":"St. Mary Parish","pop":49406,"adj":["c22007","c22045","c22099","c22109"]},"c22103":{"name":"St. Tammany Parish","pop":264570,"adj":["c22051","c22071","c22087","c22105","c22117","c28045","c28109"]},"c22105":{"name":"Tangipahoa Parish","pop":133157,"adj":["c22051","c22063","c22089","c22091","c22095","c22103","c22117","c28005","c28113"]},"c22107":{"name":"Tensas Parish","pop":4147,"adj":["c22025","c22029","c22041","c22065","c28001","c28021","c28063","c28149"]},"c22109":{"name":"Terrebonne Parish","pop":109580,"adj":["c22007","c22057","c22101"]},"c22111":{"name":"Union Parish","pop":21107,"adj":["c05003","c05139","c22027","c22061","c22067","c22073"]},"c22113":{"name":"Vermilion Parish","pop":57359,"adj":["c22001","c22023","c22045","c22053","c22055"]},"c22115":{"name":"Vernon Parish","pop":48750,"adj":["c22003","c22011","c22069","c22079","c22085","c48351"]},"c22117":{"name":"Washington Parish","pop":45463,"adj":["c22103","c22105","c28091","c28109","c28113","c28147"]},"c22119":{"name":"Webster Parish","pop":36967,"adj":["c05027","c05073","c22013","c22015","c22027"]},"c22121":{"name":"West Baton Rouge Parish","pop":27199,"adj":["c22033","c22037","c22047","c22077","c22125"]},"c22123":{"name":"West Carroll Parish","pop":9751,"adj":["c05017","c22035","c22067","c22083"]},"c22125":{"name":"West Feliciana Parish","pop":15310,"adj":["c22009","c22029","c22037","c22077","c22121","c28157"]},"c22127":{"name":"Winn Parish","pop":13755,"adj":["c22013","c22021","c22043","c22049","c22059","c22069"]}}; </script>
+<script>const COUNTY_DATA = {"c22001":{"name":"Acadia Parish","pop":57576,"adj":["c22039","c22053","c22055","c22097","c22113"]},"c22003":{"name":"Allen Parish","pop":22750,"adj":["c22011","c22039","c22053","c22079","c22115"]},"c22005":{"name":"Ascension Parish","pop":126500,"adj":["c22007","c22033","c22047","c22063","c22093","c22095"]},"c22007":{"name":"Assumption Parish","pop":21039,"adj":["c22005","c22045","c22047","c22057","c22093","c22099","c22101","c22109"]},"c22009":{"name":"Avoyelles Parish","pop":39693,"adj":["c22025","c22029","c22039","c22059","c22077","c22079","c22097","c22125"]},"c22011":{"name":"Beauregard Parish","pop":36549,"adj":["c22003","c22019","c22053","c22115","c48351"]},"c22013":{"name":"Bienville Parish","pop":12981,"adj":["c22015","c22027","c22049","c22061","c22069","c22081","c22119","c22127"]},"c22015":{"name":"Bossier Parish","pop":128746,"adj":["c05073","c05091","c22013","c22017","c22081","c22119"]},"c22017":{"name":"Caddo Parish","pop":237848,"adj":["c05091","c22015","c22031","c22081","c48067","c48203","c48315","c48365"]},"c22019":{"name":"Calcasieu Parish","pop":216785,"adj":["c22011","c22023","c22053","c48351","c48361"]},"c22021":{"name":"Caldwell Parish","pop":9645,"adj":["c22025","c22041","c22049","c22059","c22073","c22083","c22127"]},"c22023":{"name":"Cameron Parish","pop":5617,"adj":["c22019","c22053","c22113","c48245","c48361"]},"c22025":{"name":"Catahoula Parish","pop":8906,"adj":["c22009","c22021","c22029","c22041","c22059","c22107"]},"c22027":{"name":"Claiborne Parish","pop":14170,"adj":["c05027","c05139","c22013","c22061","c22111","c22119"]},"c22029":{"name":"Concordia Parish","pop":18687,"adj":["c22009","c22025","c22077","c22107","c22125","c28001","c28157"]},"c22031":{"name":"De Soto Parish","pop":26812,"adj":["c22017","c22069","c22081","c22085","c48365","c48419"]},"c22033":{"name":"East Baton Rouge Parish","pop":456781,"adj":["c22005","c22037","c22047","c22063","c22091","c22121"]},"c22035":{"name":"East Carroll Parish","pop":7459,"adj":["c05017","c22065","c22083","c22123","c28055","c28149"]},"c22037":{"name":"East Feliciana Parish","pop":19539,"adj":["c22033","c22091","c22121","c22125","c28005","c28157"]},"c22039":{"name":"Evangeline Parish","pop":32350,"adj":["c22001","c22003","c22009","c22053","c22079","c22097"]},"c22041":{"name":"Franklin Parish","pop":19774,"adj":["c22021","c22025","c22065","c22083","c22107"]},"c22043":{"name":"Grant Parish","pop":22169,"adj":["c22059","c22069","c22079","c22127"]},"c22045":{"name":"Iberia Parish","pop":69929,"adj":["c22007","c22047","c22055","c22099","c22101","c22113"]},"c22047":{"name":"Iberville Parish","pop":30241,"adj":["c22005","c22007","c22033","c22045","c22077","c22099","c22121"]},"c22049":{"name":"Jackson Parish","pop":15031,"adj":["c22013","c22021","c22061","c22073","c22127"]},"c22051":{"name":"Jefferson Parish","pop":440781,"adj":["c22057","c22071","c22075","c22089","c22095","c22103","c22105"]},"c22053":{"name":"Jefferson Davis Parish","pop":32250,"adj":["c22001","c22003","c22011","c22019","c22023","c22039","c22113"]},"c22055":{"name":"Lafayette Parish","pop":241753,"adj":["c22001","c22045","c22097","c22099","c22113"]},"c22057":{"name":"Lafourche Parish","pop":97557,"adj":["c22007","c22051","c22089","c22093","c22095","c22109"]},"c22059":{"name":"LaSalle Parish","pop":14791,"adj":["c22009","c22021","c22025","c22043","c22079","c22127"]},"c22061":{"name":"Lincoln Parish","pop":48396,"adj":["c22013","c22027","c22049","c22073","c22111"]},"c22063":{"name":"Livingston Parish","pop":142282,"adj":["c22005","c22033","c22091","c22095","c22105"]},"c22065":{"name":"Madison Parish","pop":10017,"adj":["c22035","c22041","c22083","c22107","c28149"]},"c22067":{"name":"Morehouse Parish","pop":25629,"adj":["c05003","c05017","c05139","c22073","c22083","c22111","c22123"]},"c22069":{"name":"Natchitoches Parish","pop":37515,"adj":["c22013","c22031","c22043","c22079","c22081","c22085","c22115","c22127"]},"c22071":{"name":"Orleans Parish","pop":383997,"adj":["c22051","c22075","c22087","c22103"]},"c22073":{"name":"Ouachita Parish","pop":160368,"adj":["c22021","c22049","c22061","c22067","c22083","c22111"]},"c22075":{"name":"Plaquemines Parish","pop":23515,"adj":["c22051","c22071","c22087"]},"c22077":{"name":"Pointe Coupee Parish","pop":20758,"adj":["c22009","c22029","c22047","c22097","c22099","c22121","c22125"]},"c22079":{"name":"Rapides Parish","pop":130023,"adj":["c22003","c22009","c22039","c22043","c22059","c22069","c22115"]},"c22081":{"name":"Red River Parish","pop":7620,"adj":["c22013","c22015","c22017","c22031","c22069"]},"c22083":{"name":"Richland Parish","pop":20043,"adj":["c22021","c22035","c22041","c22065","c22067","c22073","c22123"]},"c22085":{"name":"Sabine Parish","pop":22155,"adj":["c22031","c22069","c22115","c48351","c48403","c48419"]},"c22087":{"name":"St. Bernard Parish","pop":43764,"adj":["c22071","c22075","c22103","c28045","c28047"]},"c22089":{"name":"St. Charles Parish","pop":52549,"adj":["c22051","c22057","c22095","c22105"]},"c22091":{"name":"St. Helena Parish","pop":10920,"adj":["c22033","c22037","c22063","c22105","c28005"]},"c22093":{"name":"St. James Parish","pop":20192,"adj":["c22005","c22007","c22057","c22095"]},"c22095":{"name":"St. John the Baptist Parish","pop":42477,"adj":["c22005","c22051","c22057","c22063","c22089","c22093","c22105"]},"c22097":{"name":"St. Landry Parish","pop":82540,"adj":["c22001","c22009","c22039","c22055","c22077","c22099"]},"c22099":{"name":"St. Martin Parish","pop":51767,"adj":["c22007","c22045","c22047","c22055","c22077","c22097","c22101"]},"c22101":{"name":"St. Mary Parish","pop":49406,"adj":["c22007","c22045","c22099","c22109"]},"c22103":{"name":"St. Tammany Parish","pop":264570,"adj":["c22051","c22071","c22087","c22105","c22117","c28045","c28109"]},"c22105":{"name":"Tangipahoa Parish","pop":133157,"adj":["c22051","c22063","c22089","c22091","c22095","c22103","c22117","c28005","c28113"]},"c22107":{"name":"Tensas Parish","pop":4147,"adj":["c22025","c22029","c22041","c22065","c28001","c28021","c28063","c28149"]},"c22109":{"name":"Terrebonne Parish","pop":109580,"adj":["c22007","c22057","c22101"]},"c22111":{"name":"Union Parish","pop":21107,"adj":["c05003","c05139","c22027","c22061","c22067","c22073"]},"c22113":{"name":"Vermilion Parish","pop":57359,"adj":["c22001","c22023","c22045","c22053","c22055"]},"c22115":{"name":"Vernon Parish","pop":48750,"adj":["c22003","c22011","c22069","c22079","c22085","c48351"]},"c22117":{"name":"Washington Parish","pop":45463,"adj":["c22103","c22105","c28091","c28109","c28113","c28147"]},"c22119":{"name":"Webster Parish","pop":36967,"adj":["c05027","c05073","c22013","c22015","c22027"]},"c22121":{"name":"West Baton Rouge Parish","pop":27199,"adj":["c22033","c22037","c22047","c22077","c22125"]},"c22123":{"name":"West Carroll Parish","pop":9751,"adj":["c05017","c22035","c22067","c22083"]},"c22125":{"name":"West Feliciana Parish","pop":15310,"adj":["c22009","c22029","c22037","c22077","c22121","c28157"]},"c22127":{"name":"Winn Parish","pop":13755,"adj":["c22013","c22021","c22043","c22049","c22059","c22069"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -203,7 +218,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -250,21 +267,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -319,7 +343,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);

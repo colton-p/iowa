@@ -1,10 +1,14 @@
 <html>
 
-<body>
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
 
-<div style="display: flex">
-    <div>
-        <?xml version="1.0" encoding="utf-8" ?>
+<body>
+    <p id="score-box"></p>
+    <div style="display: flex">
+        <div>
+            <?xml version="1.0" encoding="utf-8" ?>
 <svg baseProfile="full" fill="#d0d0d0" height="399.26579503341725" stroke="#ffffff" stroke-width="1" version="1.1" width="400.0" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<defs />
 	<g id="counties"><path d="M 254.7881076265136,216.4348497294332 L 258.5027123880973,216.80623652293306 L 262.0765940524441,212.42752223753175 L 263.79526710000005,209.45479932799495 L 290.5669032122678,209.46428053235982 L 290.48316354278916,228.04380774995167 L 290.439544550067,235.91241007972766 L 280.07806460633594,235.83219863078875 L 279.8142570771135,235.73398669920448 L 279.9070860252272,225.13764285173485 L 258.59781131878736,224.85094685374165 L 256.2642017732123,221.97408255786323 L 253.54355853677555,216.29766824833422 L 254.7881076265136,216.4348497294332 z" id="c12081" />
@@ -76,124 +80,135 @@
 		<path d="M 354.2660171848008,288.34451184419106 L 385.98505113801343,287.9648390089797 L 388.5713049309215,287.497776779603 L 391.06535850641734,288.29014220955804 L 392.9095542780474,288.2667272059496 L 396.7332755343244,288.2121697627179 L 398.03923988659386,288.6064895620239 L 397.57651789586555,292.9357849214496 L 396.4576000192676,302.3603526957313 L 396.4135466921622,302.7306939851087 L 396.28892741154067,306.96346165589307 L 396.21425563986554,309.4936234499511 L 396.21018969245995,309.6312624701837 L 391.2449206475309,309.7112565059538 L 386.3969624359252,309.90137081308967 L 384.688932462228,310.7347581930058 L 365.42965280708046,310.9707449577575 L 365.4151355661133,309.6507328201248 L 354.90234097140836,309.7077799265755 L 354.3822221451489,292.826981358652 L 354.2660171848008,288.34451184419106 z" id="c12011" />
 	</g>
 </svg>
-        <div id="group-pops"></div>
-        <div id ="score-box"></div>
-        <div id ="best-score-box" style="font-style: italic"></div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>size</th>
+                    <th>diff</th>
+                </thead>
+                <tbody id="group-pops">
+
+                </tbody>
+            </table>
+            <div id="valid-box"></div>
+            <div id="best-score-box" style="font-style: italic"></div>
+        </div>
+        <div id='hover-text' style="width: 200px"></div>
+        <ul id="sorted-list"> </ul>
     </div>
-    <div id='hover-text' style="width: 200px"></div>
-    <ul id="sorted-list"> </ul>
-</div>
 
-<hr>
+    <hr>
 
-<footer id="footer">
-    <a href="?k=2">k = 2</a>
-    <a href="?k=3">k = 3</a>
-    <a href="?k=4">k = 4</a>
-    <br>
-    
+    <footer id="footer">
+        <a href="?k=2">k = 2</a>
+        <a href="?k=3">k = 3</a>
+        <a href="?k=4">k = 4</a>
+        <br>
+        
         <a href="de.html">de</a>
-    
+        
         <a href="ri.html">ri</a>
-    
+        
         <a href="ct.html">ct</a>
-    
+        
         <a href="nh.html">nh</a>
-    
+        
         <a href="ma.html">ma</a>
-    
+        
         <a href="vt.html">vt</a>
-    
+        
         <a href="az.html">az</a>
-    
+        
         <a href="me.html">me</a>
-    
+        
         <a href="nv.html">nv</a>
-    
+        
         <a href="nj.html">nj</a>
-    
+        
         <a href="wy.html">wy</a>
-    
+        
         <a href="md.html">md</a>
-    
+        
         <a href="ut.html">ut</a>
-    
+        
         <a href="nm.html">nm</a>
-    
+        
         <a href="or.html">or</a>
-    
+        
         <a href="wa.html">wa</a>
-    
+        
         <a href="id.html">id</a>
-    
+        
         <a href="sc.html">sc</a>
-    
+        
         <a href="nd.html">nd</a>
-    
+        
         <a href="wv.html">wv</a>
-    
+        
         <a href="mt.html">mt</a>
-    
+        
         <a href="ca.html">ca</a>
-    
+        
         <a href="ny.html">ny</a>
-    
+        
         <a href="co.html">co</a>
-    
+        
         <a href="la.html">la</a>
-    
+        
         <a href="sd.html">sd</a>
-    
+        
         <a href="al.html">al</a>
-    
+        
         <a href="fl.html">fl</a>
-    
+        
         <a href="pa.html">pa</a>
-    
+        
         <a href="wi.html">wi</a>
-    
+        
         <a href="ar.html">ar</a>
-    
+        
         <a href="ok.html">ok</a>
-    
+        
         <a href="ms.html">ms</a>
-    
+        
         <a href="mi.html">mi</a>
-    
+        
         <a href="mn.html">mn</a>
-    
+        
         <a href="oh.html">oh</a>
-    
+        
         <a href="in.html">in</a>
-    
+        
         <a href="ne.html">ne</a>
-    
+        
         <a href="tn.html">tn</a>
-    
+        
         <a href="ia.html">ia</a>
-    
+        
         <a href="nc.html">nc</a>
-    
+        
         <a href="il.html">il</a>
-    
+        
         <a href="ks.html">ks</a>
-    
+        
         <a href="mo.html">mo</a>
-    
+        
         <a href="ky.html">ky</a>
-    
+        
         <a href="va.html">va</a>
-    
+        
         <a href="ga.html">ga</a>
-    
+        
         <a href="tx.html">tx</a>
-    
-</footer>
+        
+        <br>
+        <a href="../index.html">index</a>
+    </footer>
 
 </body>
 
 <script> const STATE = 'fl'</script>
-<script>const COUNTY_DATA={"c12001":{"name":"Alachua","pop":278468,"adj":["c12007","c12023","c12041","c12075","c12083","c12107","c12125"]},"c12003":{"name":"Baker","pop":28259,"adj":["c12007","c12019","c12023","c12031","c12089","c12125","c13049","c13065","c13299"]},"c12005":{"name":"Bay","pop":175216,"adj":["c12013","c12045","c12063","c12131","c12133"]},"c12007":{"name":"Bradford","pop":28303,"adj":["c12001","c12003","c12019","c12107","c12125"]},"c12009":{"name":"Brevard","pop":606612,"adj":["c12061","c12095","c12097","c12117","c12127"]},"c12011":{"name":"Broward","pop":1944375,"adj":["c12021","c12051","c12086","c12099"]},"c12013":{"name":"Calhoun","pop":13648,"adj":["c12005","c12039","c12045","c12063","c12077"]},"c12015":{"name":"Charlotte","pop":186847,"adj":["c12027","c12043","c12051","c12055","c12071","c12115"]},"c12017":{"name":"Citrus","pop":153843,"adj":["c12053","c12075","c12083","c12119"]},"c12019":{"name":"Clay","pop":218245,"adj":["c12003","c12007","c12031","c12107","c12109"]},"c12021":{"name":"Collier","pop":375752,"adj":["c12011","c12051","c12071","c12086","c12087"]},"c12023":{"name":"Columbia","pop":69698,"adj":["c12001","c12003","c12041","c12047","c12121","c12125","c13065","c13101"]},"c12027":{"name":"DeSoto","pop":33976,"adj":["c12015","c12043","c12049","c12055","c12081","c12115"]},"c12029":{"name":"Dixie","pop":16759,"adj":["c12041","c12067","c12075","c12123"]},"c12031":{"name":"Duval","pop":995567,"adj":["c12003","c12019","c12089","c12109"]},"c12033":{"name":"Escambia","pop":321905,"adj":["c01003","c01053","c12113"]},"c12035":{"name":"Flagler","pop":115378,"adj":["c12107","c12109","c12127"]},"c12037":{"name":"Franklin","pop":12451,"adj":["c12045","c12077","c12129"]},"c12039":{"name":"Gadsden","pop":43826,"adj":["c12013","c12063","c12073","c12077","c13087","c13131","c13253"]},"c12041":{"name":"Gilchrist","pop":17864,"adj":["c12001","c12023","c12029","c12067","c12075","c12121"]},"c12043":{"name":"Glades","pop":12126,"adj":["c12015","c12027","c12051","c12055","c12071","c12085","c12093","c12099"]},"c12045":{"name":"Gulf","pop":14192,"adj":["c12005","c12013","c12037","c12077"]},"c12047":{"name":"Hamilton","pop":14004,"adj":["c12023","c12079","c12121","c13027","c13101","c13185"]},"c12049":{"name":"Hardee","pop":25327,"adj":["c12027","c12055","c12057","c12081","c12105"]},"c12051":{"name":"Hendry","pop":39619,"adj":["c12011","c12015","c12021","c12043","c12071","c12085","c12093","c12099"]},"c12053":{"name":"Hernando","pop":194515,"adj":["c12017","c12101","c12119"]},"c12055":{"name":"Highlands","pop":101235,"adj":["c12015","c12027","c12043","c12049","c12093","c12097","c12105"]},"c12057":{"name":"Hillsborough","pop":1459762,"adj":["c12049","c12081","c12101","c12103","c12105"]},"c12059":{"name":"Holmes","pop":19653,"adj":["c01061","c12063","c12131","c12133"]},"c12061":{"name":"Indian River","pop":159788,"adj":["c12009","c12093","c12097","c12111"]},"c12063":{"name":"Jackson","pop":47319,"adj":["c01061","c01069","c12005","c12013","c12039","c12059","c12077","c12133","c13253"]},"c12065":{"name":"Jefferson","pop":14510,"adj":["c12073","c12079","c12123","c12129","c13027","c13275"]},"c12067":{"name":"Lafayette","pop":8226,"adj":["c12029","c12041","c12079","c12121","c12123"]},"c12069":{"name":"Lake","pop":383956,"adj":["c12083","c12095","c12097","c12105","c12117","c12119","c12127"]},"c12071":{"name":"Lee","pop":760822,"adj":["c12015","c12021","c12043","c12051"]},"c12073":{"name":"Leon","pop":292198,"adj":["c12039","c12065","c12077","c12129","c13131","c13275"]},"c12075":{"name":"Levy","pop":42915,"adj":["c12001","c12017","c12029","c12041","c12083"]},"c12077":{"name":"Liberty","pop":7974,"adj":["c12013","c12037","c12039","c12045","c12063","c12073","c12129"]},"c12079":{"name":"Madison","pop":17968,"adj":["c12047","c12065","c12067","c12121","c12123","c13027","c13185"]},"c12081":{"name":"Manatee","pop":399710,"adj":["c12027","c12049","c12057","c12105","c12115"]},"c12083":{"name":"Marion","pop":375908,"adj":["c12001","c12017","c12069","c12075","c12107","c12119","c12127"]},"c12085":{"name":"Martin","pop":158431,"adj":["c12043","c12051","c12093","c12099","c12111"]},"c12086":{"name":"Miami-Dade","pop":2701767,"adj":["c12011","c12021","c12087"]},"c12087":{"name":"Monroe","pop":82874,"adj":["c12021","c12086"]},"c12089":{"name":"Nassau","pop":90352,"adj":["c12003","c12031","c13039","c13049"]},"c12091":{"name":"Okaloosa","pop":211668,"adj":["c01039","c01053","c12113","c12131"]},"c12093":{"name":"Okeechobee","pop":39644,"adj":["c12043","c12051","c12055","c12061","c12085","c12097","c12099","c12105","c12111"]},"c12095":{"name":"Orange","pop":1429908,"adj":["c12009","c12069","c12097","c12105","c12117","c12127"]},"c12097":{"name":"Osceola","pop":388656,"adj":["c12009","c12055","c12061","c12069","c12093","c12095","c12105"]},"c12099":{"name":"Palm Beach","pop":1492191,"adj":["c12011","c12043","c12051","c12085","c12093"]},"c12101":{"name":"Pasco","pop":561891,"adj":["c12053","c12057","c12103","c12105","c12119"]},"c12103":{"name":"Pinellas","pop":959107,"adj":["c12057","c12101"]},"c12105":{"name":"Polk","pop":725046,"adj":["c12049","c12055","c12057","c12069","c12081","c12093","c12095","c12097","c12101","c12119"]},"c12107":{"name":"Putnam","pop":73321,"adj":["c12001","c12007","c12019","c12035","c12083","c12109","c12127"]},"c12109":{"name":"St. Johns","pop":273425,"adj":["c12019","c12031","c12035","c12107"]},"c12111":{"name":"St. Lucie","pop":329226,"adj":["c12061","c12085","c12093"]},"c12113":{"name":"Santa Rosa","pop":188000,"adj":["c01053","c12033","c12091"]},"c12115":{"name":"Sarasota","pop":434006,"adj":["c12015","c12027","c12081"]},"c12117":{"name":"Seminole","pop":470856,"adj":["c12009","c12069","c12095","c12127"]},"c12119":{"name":"Sumter","pop":129752,"adj":["c12017","c12053","c12069","c12083","c12101","c12105"]},"c12121":{"name":"Suwannee","pop":43474,"adj":["c12023","c12041","c12047","c12067","c12079"]},"c12123":{"name":"Taylor","pop":21796,"adj":["c12029","c12065","c12067","c12079"]},"c12125":{"name":"Union","pop":16147,"adj":["c12001","c12003","c12007","c12023"]},"c12127":{"name":"Volusia","pop":553543,"adj":["c12009","c12035","c12069","c12083","c12095","c12107","c12117"]},"c12129":{"name":"Wakulla","pop":33764,"adj":["c12037","c12065","c12073","c12077"]},"c12131":{"name":"Walton","pop":75305,"adj":["c01039","c01061","c12005","c12059","c12091","c12133"]},"c12133":{"name":"Washington","pop":25318,"adj":["c12005","c12059","c12063","c12131"]}}; </script>
+<script>const COUNTY_DATA = {"c12001":{"name":"Alachua","pop":278468,"adj":["c12007","c12023","c12041","c12075","c12083","c12107","c12125"]},"c12003":{"name":"Baker","pop":28259,"adj":["c12007","c12019","c12023","c12031","c12089","c12125","c13049","c13065","c13299"]},"c12005":{"name":"Bay","pop":175216,"adj":["c12013","c12045","c12063","c12131","c12133"]},"c12007":{"name":"Bradford","pop":28303,"adj":["c12001","c12003","c12019","c12107","c12125"]},"c12009":{"name":"Brevard","pop":606612,"adj":["c12061","c12095","c12097","c12117","c12127"]},"c12011":{"name":"Broward","pop":1944375,"adj":["c12021","c12051","c12086","c12099"]},"c12013":{"name":"Calhoun","pop":13648,"adj":["c12005","c12039","c12045","c12063","c12077"]},"c12015":{"name":"Charlotte","pop":186847,"adj":["c12027","c12043","c12051","c12055","c12071","c12115"]},"c12017":{"name":"Citrus","pop":153843,"adj":["c12053","c12075","c12083","c12119"]},"c12019":{"name":"Clay","pop":218245,"adj":["c12003","c12007","c12031","c12107","c12109"]},"c12021":{"name":"Collier","pop":375752,"adj":["c12011","c12051","c12071","c12086","c12087"]},"c12023":{"name":"Columbia","pop":69698,"adj":["c12001","c12003","c12041","c12047","c12121","c12125","c13065","c13101"]},"c12027":{"name":"DeSoto","pop":33976,"adj":["c12015","c12043","c12049","c12055","c12081","c12115"]},"c12029":{"name":"Dixie","pop":16759,"adj":["c12041","c12067","c12075","c12123"]},"c12031":{"name":"Duval","pop":995567,"adj":["c12003","c12019","c12089","c12109"]},"c12033":{"name":"Escambia","pop":321905,"adj":["c01003","c01053","c12113"]},"c12035":{"name":"Flagler","pop":115378,"adj":["c12107","c12109","c12127"]},"c12037":{"name":"Franklin","pop":12451,"adj":["c12045","c12077","c12129"]},"c12039":{"name":"Gadsden","pop":43826,"adj":["c12013","c12063","c12073","c12077","c13087","c13131","c13253"]},"c12041":{"name":"Gilchrist","pop":17864,"adj":["c12001","c12023","c12029","c12067","c12075","c12121"]},"c12043":{"name":"Glades","pop":12126,"adj":["c12015","c12027","c12051","c12055","c12071","c12085","c12093","c12099"]},"c12045":{"name":"Gulf","pop":14192,"adj":["c12005","c12013","c12037","c12077"]},"c12047":{"name":"Hamilton","pop":14004,"adj":["c12023","c12079","c12121","c13027","c13101","c13185"]},"c12049":{"name":"Hardee","pop":25327,"adj":["c12027","c12055","c12057","c12081","c12105"]},"c12051":{"name":"Hendry","pop":39619,"adj":["c12011","c12015","c12021","c12043","c12071","c12085","c12093","c12099"]},"c12053":{"name":"Hernando","pop":194515,"adj":["c12017","c12101","c12119"]},"c12055":{"name":"Highlands","pop":101235,"adj":["c12015","c12027","c12043","c12049","c12093","c12097","c12105"]},"c12057":{"name":"Hillsborough","pop":1459762,"adj":["c12049","c12081","c12101","c12103","c12105"]},"c12059":{"name":"Holmes","pop":19653,"adj":["c01061","c12063","c12131","c12133"]},"c12061":{"name":"Indian River","pop":159788,"adj":["c12009","c12093","c12097","c12111"]},"c12063":{"name":"Jackson","pop":47319,"adj":["c01061","c01069","c12005","c12013","c12039","c12059","c12077","c12133","c13253"]},"c12065":{"name":"Jefferson","pop":14510,"adj":["c12073","c12079","c12123","c12129","c13027","c13275"]},"c12067":{"name":"Lafayette","pop":8226,"adj":["c12029","c12041","c12079","c12121","c12123"]},"c12069":{"name":"Lake","pop":383956,"adj":["c12083","c12095","c12097","c12105","c12117","c12119","c12127"]},"c12071":{"name":"Lee","pop":760822,"adj":["c12015","c12021","c12043","c12051"]},"c12073":{"name":"Leon","pop":292198,"adj":["c12039","c12065","c12077","c12129","c13131","c13275"]},"c12075":{"name":"Levy","pop":42915,"adj":["c12001","c12017","c12029","c12041","c12083"]},"c12077":{"name":"Liberty","pop":7974,"adj":["c12013","c12037","c12039","c12045","c12063","c12073","c12129"]},"c12079":{"name":"Madison","pop":17968,"adj":["c12047","c12065","c12067","c12121","c12123","c13027","c13185"]},"c12081":{"name":"Manatee","pop":399710,"adj":["c12027","c12049","c12057","c12105","c12115"]},"c12083":{"name":"Marion","pop":375908,"adj":["c12001","c12017","c12069","c12075","c12107","c12119","c12127"]},"c12085":{"name":"Martin","pop":158431,"adj":["c12043","c12051","c12093","c12099","c12111"]},"c12086":{"name":"Miami-Dade","pop":2701767,"adj":["c12011","c12021","c12087"]},"c12087":{"name":"Monroe","pop":82874,"adj":["c12021","c12086"]},"c12089":{"name":"Nassau","pop":90352,"adj":["c12003","c12031","c13039","c13049"]},"c12091":{"name":"Okaloosa","pop":211668,"adj":["c01039","c01053","c12113","c12131"]},"c12093":{"name":"Okeechobee","pop":39644,"adj":["c12043","c12051","c12055","c12061","c12085","c12097","c12099","c12105","c12111"]},"c12095":{"name":"Orange","pop":1429908,"adj":["c12009","c12069","c12097","c12105","c12117","c12127"]},"c12097":{"name":"Osceola","pop":388656,"adj":["c12009","c12055","c12061","c12069","c12093","c12095","c12105"]},"c12099":{"name":"Palm Beach","pop":1492191,"adj":["c12011","c12043","c12051","c12085","c12093"]},"c12101":{"name":"Pasco","pop":561891,"adj":["c12053","c12057","c12103","c12105","c12119"]},"c12103":{"name":"Pinellas","pop":959107,"adj":["c12057","c12101"]},"c12105":{"name":"Polk","pop":725046,"adj":["c12049","c12055","c12057","c12069","c12081","c12093","c12095","c12097","c12101","c12119"]},"c12107":{"name":"Putnam","pop":73321,"adj":["c12001","c12007","c12019","c12035","c12083","c12109","c12127"]},"c12109":{"name":"St. Johns","pop":273425,"adj":["c12019","c12031","c12035","c12107"]},"c12111":{"name":"St. Lucie","pop":329226,"adj":["c12061","c12085","c12093"]},"c12113":{"name":"Santa Rosa","pop":188000,"adj":["c01053","c12033","c12091"]},"c12115":{"name":"Sarasota","pop":434006,"adj":["c12015","c12027","c12081"]},"c12117":{"name":"Seminole","pop":470856,"adj":["c12009","c12069","c12095","c12127"]},"c12119":{"name":"Sumter","pop":129752,"adj":["c12017","c12053","c12069","c12083","c12101","c12105"]},"c12121":{"name":"Suwannee","pop":43474,"adj":["c12023","c12041","c12047","c12067","c12079"]},"c12123":{"name":"Taylor","pop":21796,"adj":["c12029","c12065","c12067","c12079"]},"c12125":{"name":"Union","pop":16147,"adj":["c12001","c12003","c12007","c12023"]},"c12127":{"name":"Volusia","pop":553543,"adj":["c12009","c12035","c12069","c12083","c12095","c12107","c12117"]},"c12129":{"name":"Wakulla","pop":33764,"adj":["c12037","c12065","c12073","c12077"]},"c12131":{"name":"Walton","pop":75305,"adj":["c01039","c01061","c12005","c12059","c12091","c12133"]},"c12133":{"name":"Washington","pop":25318,"adj":["c12005","c12059","c12063","c12131"]}}; </script>
 <script>const COLORS = ['darkgreen', 'blue', 'darkorange', 'purple', 'red', 'brown'];
 const N_GROUPS = Number.parseInt(new URLSearchParams(document.location.search).get('k')) || 4;
 
@@ -206,7 +221,9 @@ const FMT = {
 function isValid() {
     const group_ixs = Array(N_GROUPS).fill(0).map((v, ix) => ix);
 
-    return group_ixs.every(isGroupConnected);
+    const bad_groups = group_ixs.filter(ix => !isGroupConnected(ix));
+    
+    return [bad_groups.length === 0, bad_groups];
 }
 
 function isGroupConnected(grp) {
@@ -253,21 +270,28 @@ function updateDisplay(cids) {
 
     const rslt = sumGroups();
     Object.entries(rslt).forEach(([group, pop]) => {
-        document.getElementById(`pop-${group}`).textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        const row = [FMT.human(pop), FMT.long(pop), FMT.long(Math.floor(pop - TOTAL / N_GROUPS))];
+        //textContent = FMT.human(pop) + "\t" + FMT.long(pop) + "\t" + Math.floor(pop - TOTAL / N_GROUPS);
+        document.getElementById(`pop-${group}`).innerHTML =  row.map(v => `<td>${v}</td>`).join('')
     });
 
     const lsKey = `${STATE}-${N_GROUPS}`;
     const score = Math.floor(TOTAL/N_GROUPS - Math.min(...Object.values(rslt)));
     let bestScore = localStorage.getItem(lsKey) || '';
-    const valid = isValid();
-    document.getElementById('score-box').textContent = score + "\t" + valid;
+    const [valid, badGroups] = isValid();
+    document.getElementById('score-box').innerHTML = `score: <b>${FMT.long(score)}</b>`;
+    if (valid) {
+        document.getElementById('valid-box').textContent = '✅ valid';
+    } else {
+        document.getElementById('valid-box').textContent = `❌ group ${badGroups[0]} not connected`
+    }
     if (valid && Number(bestScore || TOTAL) > score) {
         bestScore = score;
         localStorage.setItem(lsKey, score);
         localStorage.setItem(lsKey+'-groups', JSON.stringify(friendlyGroups()));
     }
 
-    document.getElementById('best-score-box').textContent = 'best: ' + bestScore
+    document.getElementById('best-score-box').textContent = 'best: ' + FMT.long(bestScore);
 }
 
 function sumGroups() {
@@ -322,7 +346,7 @@ function setup() {
 
     const groups_el = document.getElementById('group-pops');
     for (let ix = 0; ix < N_GROUPS; ++ix) {
-        const el = document.createElement("p");
+        const el = document.createElement("tr");
         el.id = 'pop-'+ix;
         el.style.color = COLORS[ix];
         groups_el.appendChild(el);
